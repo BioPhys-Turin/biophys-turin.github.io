@@ -661,20 +661,16 @@ nav {
     width: auto; /* Maintain aspect ratio */
 }
 
-#footer-container {
-    min-height: 150px; /* Adjust based on the actual footer height */
-    background-color: #f8f9fa; /* Optional: To visualize reserved space */
-}
 
 footer {
-    min-height: 280px;
+    position: relative;
     font-size: 0.8rem;
     text-align: center;
-    padding: 20px 0;
     background-color: #f9f9f9;
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 280px;
 }
 
 footer a {
