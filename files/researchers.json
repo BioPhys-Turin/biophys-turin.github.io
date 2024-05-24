@@ -1,0 +1,103 @@
+[   
+    {
+        "name": "Michele Caselle",
+        "title": "Professor",
+        "image": "images/profiles/michele.jpeg",
+        "description": "Interested in Statistical Mechanics and Quantum Field Theory, with a side of Quantitative Biology",
+        "socials": {
+            "mail": "michele.caselle@to.infn.it",
+            "github": "https://github.com/mcaselle",
+            "linkedin": "https://www.linkedin.com/in/michele-caselle-17107613/",
+            "publications": "https://pubmed.ncbi.nlm.nih.gov/?term=caselle+michele",
+            "personal-page": "http://personalpages.to.infn.it/~caselle/"
+        }
+    },
+    
+    {
+        "name": "Matteo Osella",
+        "title": "Associate professor",
+        "image": "images/profiles/matteo.png",
+        "description": "I lead our projects in machine learning and systems biology, but my true passion are scaling laws",
+        "socials": {
+            "mail": "matteo.osella@unito.it",
+            "github": "https://github.com/matteo-osella",
+            "linkedin": "https://www.linkedin.com/in/matteo-osella-54413058/",
+            "publications": "https://pubmed.ncbi.nlm.nih.gov/?term=matteo+osella"
+        }
+    },
+
+    {
+        "name": "Filippo Valle",
+        "title": "Postdoc",
+        "description": "Curious about the complexity behind the systems, I love coding and data mining",
+        "image": "images/profiles/valle.jpg",
+        "socials": {
+            "mail": "filippo.valle@unito.it",
+            "linkedin": "https://www.linkedin.com/in/filippo-valle/",
+            "github":"https://github.com/fvalle1"
+        }
+    },
+    
+    {
+        "name": "Letizia Pizzini",
+        "title": "PhD Student",
+        "description": "My main interest lies in quantitative analysis of biological Systems, focusing on multiomics data integration, EEG and brain image data interpretation",
+        "image": "images/profiles/Pizzini.jpg",
+        "socials": {
+            "mail": "fletizia.pizzini@unito.it",
+            "github": "https://github.com/letiziapizzini",
+            "linkedin": "https://linkedin.com/in//letizia-pizzini-ba9a061b6",
+            "twitter": "https://twitter.com/lpizziniBioPhys"
+        }
+    },
+
+    {
+        "name": "Davide Pirovano",
+        "title": "PhD Student",
+        "description": "Have you ever asked yourself if becoming a bird-watching champion would help you to distinguish a parrot from a go-kart? Well, it turns out that sometimes it can be useful when training Neural Networks. My PhD research essentially focuses on that “sometimes”",
+        "image": "images/profiles/davide.jpeg",
+        "socials": {
+            "mail": "davide.pirovano@unito.it",
+            "linkedin": "https://www.linkedin.com/in/davide-pirovano-07aba5220/"
+        }
+    },
+    
+    {
+        "name": "Federico Milanesio",
+        "title": "PhD Student",
+        "description": "I mostly study neural networks dynamics and optimal transport, but I have a whole theory on the statistical mechanics of foosball Elos I can't wait to tell you about",
+        "image": "images/profiles/fede1.png",
+        "socials": {
+            "mail": "federico.milanesio@unito.it",
+            "github": "https://github.com/FedericoMilanesio",
+            "linkedin": "https://linkedin.com/in/federico-milanesio",
+            "twitter": "https://twitter.com/FedeMilanesio"
+        }
+    },
+
+    {
+        "name": "Leonardo Agasso",
+        "title": "PhD Student",
+        "description": "My main interests are systems biology and bioinformatics, I'm currently studying  the role of non-coding RNAs and gene duplication in shaping the vertebrate regulatory network",
+        "image": "images/profiles/leo.jpg",
+        "socials": {
+            "mail": "leonardo.agasso@unito.it",
+            "github": "https://github.com/LeonardoAgasso",
+            "linkedin": "https://www.linkedin.com/in/leonardo-agasso-22ba561bb/",
+            "twitter": "https://twitter.com/AgassoLeonardo"
+        }
+    },
+
+    {
+        "name": "Niccolò Cirone",
+        "title": "PhD Student",
+        "description": "...",
+        "image": "images/profiles/nico.jpeg",
+        "socials": {
+            "mail": "niccolo.cirone@unito.it",
+            "github": "https://github.com/niccociro",
+            "linkedin": "https://www.linkedin.com/in/niccol%C3%B2-cirone-22548a168/"
+        }
+    }
+    
+]

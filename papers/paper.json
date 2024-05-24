@@ -1,0 +1,342 @@
+[   
+    {
+        "type": "article",
+        "title": "The dynamics of aerotaxis in a simple eukaryotic model",
+        "volume": "9",
+        "link": "https://www.frontiersin.org/articles/10.3389/fcell.2021.720623/full",
+        "journal": "Frontiers in Cell and Developmental Biology",
+        "author": "Marta Biondo, Cristina Panuzzo, Shahzad M. Ali, Salvatore Bozzaro, Matteo Osella, Enrico Bracco, Barbara Pergolizzi",
+        "year": "2021",
+        "pages": "720623"
+      },
+      {
+        "type": "article",
+        "title": "The impact of whole genome duplications on the human gene regulatory networks",
+        "volume": "17",
+        "link": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009638",
+        "number": "12",
+        "journal": "PLoS Computational Biology",
+        "author": "Francesco Mottes, Chiara Villa, Matteo Osella, Michele Caselle",
+        "year": "2021",
+        "pages": "e1009638"
+      },
+      {
+        "type": "article",
+        "title": "Multiomics topic modeling for breast cancer classification",
+        "volume": "14",
+        "link": "https://www.mdpi.com/2072-6694/14/5/1150",
+        "number": "5",
+        "journal": "Cancers",
+        "author": "Filippo Valle, Matteo Osella, Michele Caselle",
+        "year": "2022",
+        "pages": "1150"
+      },
+      {
+        "type": "article",
+        "title": "A 3D transcriptomics atlas of the mouse nose sheds light on the anatomical logic of smell",
+        "volume": "38",
+        "link": "https://www.cell.com/cell-reports/pdf/S2211-1247(22)00288-1.pdf",
+        "number": "12",
+        "journal": "Cell reports",
+        "author": "Mayra L. Ruiz Tejada Segura, Eman Abou Moussa, Elisa Garabello, Thiago S. Nakahara, Melanie Makhlouf, Lisa S. Mathew, Li Wang, Filippo Valle, Susie SY Huang, Joel D. Mainland",
+        "year": "2022"
+      },
+      {
+        "type": "article",
+        "author": "Marta Biondo, Abhyudai Singh, Michele Caselle, Matteo Osella",
+        "year": "2023",
+        "title": "Out-of-equilibrium gene expression fluctuations in the presence of extrinsic noise",
+        "volume": "20",
+        "journal": "Physical biology",
+        "doi": "10.1088/1478-3975/acea4e",
+        "link": "https://pubmed.ncbi.nlm.nih.gov/37489881/"
+      },
+      {
+        "type": "misc",
+        "title": "The effect of a linear feedback mechanism in a homeostasis model",
+        "link": "http://arxiv.org/abs/2303.03277",
+        "abstract": "Feedback loops are essential for regulating cell proliferation and maintaining the delicate balance between cell division and cell death...",
+        "urldate": "2024-05-04",
+        "journal": "arXiv",
+        "author": "Antonio Francesco Zirattu, Marta Biondo, Matteo Osella, Michele Caselle",
+        "month": "mar",
+        "year": "2023",
+        "note": "arXiv:2303.03277 [q-bio]"
+      },
+      {
+        "type": "article",
+        "title": "Protein degradation sets the fraction of active ribosomes at vanishing growth",
+        "volume": "18",
+        "link": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010059",
+        "number": "5",
+        "journal": "PLoS computational biology",
+        "author": "Ludovico Calabrese, Jacopo Grilli, Matteo Osella, Christopher P. Kempes, Marco Cosentino Lagomarsino, Luca Ciandrini",
+        "year": "2022",
+        "pages": "e1010059"
+      },
+      {
+        "type": "article",
+        "title": "Emergent statistical laws in single-cell transcriptomic data",
+        "volume": "107",
+        "issn": "2470-0045, 2470-0053",
+        "link": "https://link.aps.org/doi/10.1103/PhysRevE.107.044403",
+        "doi": "10.1103/PhysRevE.107.044403",
+        "language": "en",
+        "number": "4",
+        "journal": "Physical Review E",
+        "author": "Silvia Lazzardi, Filippo Valle, Andrea Mazzolini, Antonio Scialdone, Michele Caselle, Matteo Osella",
+        "month": "apr",
+        "year": "2023",
+        "pages": "044403"
+      },
+      {
+        "type": "article",
+        "title": "Inversion dynamics of class manifolds in deep learning reveals tradeoffs underlying generalization",
+        "link": "https://www.nature.com/articles/s42256-023-00772-9",
+        "urldate": "2024-05-04",
+        "volume": "6",
+        "journal": "Nature Machine Intelligence",
+        "author": "Simone Ciceri, Lorenzo Cassani, Matteo Osella, Pietro Rotondo, Filippo Valle, Marco Gherardi",
+        "year": "2024"
+      },
+
+    {
+        "type": "article",
+        "title": "Zipf and Heaps laws from dependency structures in component systems",
+        "volume": "98",
+        "link": "https://link.aps.org/doi/10.1103/PhysRevE.98.012315",
+        "journal": "Physical Review E",
+        "author": "Andrea Mazzolini, Jacopo Grilli, Eleonora De Lazzari, Matteo Osella, Marco Cosentino Lagomarsino, Marco Gherardi",
+        "year": "2018",
+        "pages": "012315"
+      },
+      {
+        "type": "article",
+        "title": "The Empirical Fluctuation Pattern of E. coli Division Control",
+        "volume": "9",
+        "link": "https://www.frontiersin.org/article/10.3389/fmicb.2018.01541/full",
+        "journal": "Frontiers in Microbiology",
+        "author": "Jacopo Grilli, Clotilde Cadart, Gabriele Micali, Matteo Osella, Marco Cosentino Lagomarsino",
+        "year": "2018",
+        "pages": "1541"
+      },
+      {
+        "type": "article",
+        "title": "Concurrent processes set E. coli cell division",
+        "volume": "4",
+        "link": "https://www.science.org/doi/10.1126/sciadv.aau3324",
+        "journal": "Science Advances",
+        "author": "Gabriele Micali, Jacopo Grilli, Matteo Osella, Marco Cosentino Lagomarsino",
+        "year": "2018",
+        "pages": "eaau3324"
+      },
+      {
+        "type": "article",
+        "title": "Heaps' law, statistics of shared components, and temporal patterns from a sample-space-reducing process",
+        "volume": "98",
+        "link": "https://link.aps.org/doi/10.1103/PhysRevE.98.052139",
+        "journal": "Physical Review E",
+        "author": "Andrea Mazzolini, Alberto Colliva, Michele Caselle, Matteo Osella",
+        "year": "2018",
+        "pages": "052139"
+      },
+      {
+        "type": "article",
+        "title": "Dissecting the control mechanisms for DNA replication and cell division in {E}. coli",
+        "volume": "25",
+        "link": "https://www.cell.com/cell-reports/pdf/S2211-1247(18)31506-7.pdf",
+        "journal": "Cell reports",
+        "author": "Gabriele Micali, Jacopo Grilli, Jacopo Marchi, Matteo Osella, Marco Cosentino Lagomarsino",
+        "year": "2018",
+        "pages": "761--771"
+      },
+      {
+        "type": "article",
+        "title": "Investigating the epi-miRNome: identification of epi-miRNAs using transfection experiments",
+        "volume": "11",
+        "link": "https://www.futuremedicine.com/doi/10.2217/epi-2019-0050",
+        "journal": "Epigenomics",
+        "author": "Elisa Reale, Daniela Taverna, Laura Cantini, Loredana Martignetti, Matteo Osella, Cristiano De Pittà, Federico Virga, Francesca Orso, Michele Caselle",
+        "year": "2019",
+        "pages": "1581--1599"
+      },
+      {
+        "type": "article",
+        "title": "A model-driven quantitative analysis of retrotransposon distributions in the human genome",
+        "volume": "12",
+        "link": "https://academic.oup.com/gbe/article-abstract/12/11/2045/5912528",
+        "journal": "Genome Biology and Evolution",
+        "author": "Andrea Riba, Maria Rita Fumagalli, Michele Caselle, Matteo Osella",
+        "year": "2020",
+        "pages": "2045--2059"
+      },
+      {
+        "type": "article",
+        "title": "A topic modeling analysis of tcga breast and lung cancer transcriptomic data",
+        "volume": "12",
+        "link": "https://www.mdpi.com/2072-6694/12/12/3799",
+        "journal": "Cancers",
+        "author": "Filippo Valle, Matteo Osella, Michele Caselle",
+        "year": "2020",
+        "pages": "3799"
+      },
+      {
+        "type": "article",
+        "title": "Initial cell density encodes proliferative potential in cancer cell populations",
+        "volume": "11",
+        "link": "https://www.nature.com/articles/s41598-021-85406-z",
+        "journal": "Scientific Reports",
+        "author": "Chiara Enrico Bena, Marco Del Giudice, Alice Grob, Thomas Gueudré, Mattia Miotto, Dimitra Gialama, Matteo Osella, Emilia Turco, Francesca Ceroni, Andrea De Martino, Carla Bosia",
+        "year": "2021",
+        "pages": "6101"
+      },
+      
+    {
+        "type": "article",
+        "title": "Statistics of Shared Components in Complex Component Systems",
+        "volume": "8",
+        "link": "https://link.aps.org/doi/10.1103/PhysRevX.8.021023",
+        "doi": "10.1103/PhysRevX.8.021023",
+        "journal": "Physical Review X",
+        "author": "Andrea Mazzolini, Marco Gherardi, Michele Caselle, Marco Cosentino Lagomarsino, Matteo Osella",
+        "month": "apr",
+        "year": "2018",
+        "pages": "021023"
+
+    },
+
+    {
+        "type": "incollection",
+        "title": "Biophysical Analysis of miRNA-Dependent Gene Regulation",
+        "address": "Cham",
+        "link": "http://link.springer.com/10.1007/978-3-319-92967-5_13",
+        "booktitle": "Systems Biology",
+        "publisher": "Springer International Publishing",
+        "author": "Andrea Riba, Matteo Osella, Michele Caselle, Miahela Zavolan",
+        "editor": "N Rajewsky, S Jurga, J Barciszewski",
+        "year": "2018",
+        "doi": "10.1007/978-3-319-92967-5_13",
+        "pages": "257-273"
+    },
+    
+    {
+        "type": "article",
+        "title": "Modelling the evolution of transcription factor binding preferences in complex eukaryotes",
+        "volume": "7",
+        "link": "https://www.nature.com/articles/s41598-017-07761-0",
+        "journal": "Scientific Reports",
+        "author": "Antonio Rosanova,Alberto Colliva, Matteo Osella, Michele Caselle",
+        "year": "2017",
+        "pages": "7596"
+    },
+    
+    {
+        "type": "article",
+        "title": "Step by step, cell by cell: quantification of the bacterial cell cycle",
+        "volume": "25",
+        "link": "https://www.cell.com/trends/microbiology/fulltext/S0966-842X(16)30200-1",
+        "journal": "Trends in Microbiology",
+        "author": "Matteo Osella, Sander J. Tans, Marco Cosentino Lagomarsino",
+        "year": "2017",
+        "pages": "250-256"
+    },
+    
+    {
+        "type": "article",
+        "title": "Relevant parameters in models of cell division control",
+        "volume": "95",
+        "link": "https://link.aps.org/doi/10.1103/PhysRevE.95.032411",
+        "doi": "10.1103/PhysRevE.95.032411",
+        "journal": "Physical Review E",
+        "author": "Jacopo Grilli, Matteo Osella, Andrew S. Kennard, Marco Cosentino Lagomarsino",
+        "month": "mar",
+        "year": "2017",
+        "pages": "032411"
+    },
+    
+    {
+        "author": "Alma Dal Co, Marco Cosentino Lagomarsino, Michele Caselle, Matteo Osella",
+        "title": "Stochastic timing in gene expression for simple regulatory strategies.",
+        "journal": "Nucleic Acids Research",
+        "year": "2017",
+        "link": "https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkw1235"
+    },
+    {
+        "author": "Francesca Orso, Lorena Quirico, Federico Virga, Elisa Penna, Daniela Dettori, Daniela Cimino, Roberto Coppo, Elena Grassi, Angela Rita Elia, Davide Brusa, Silvia Deaglio, Maria Felice Brizzi, Michael B. Stadler, Paolo Provero, Michele Caselle, Daniela Taverna",
+        "title": "miR-214 and miR-148b Targeting Inhibits Dissemination of Melanoma and Breast Cancer.",
+        "journal": "Cancer Research",
+        "year": "2016",
+        "link": "http://cancerres.aacrjournals.org/content/76/17/5151.long"
+    },
+    {
+        "author": "Lorenzo Cantini, Enzo Medico, Santo Fortunato, Michele Caselle",
+        "title": "Detection of gene communities in multi-networks reveals cancer drivers.",
+        "journal": "Sci Reports",
+        "year": "2015",
+        "link": "http://www.nature.com/articles/srep17386?shunter=1489658587172"
+    },
+    {
+        "author": "Laura Cantini, Claudio Isella, Consalvo Petti, Gabriele Picco, Simone Chiola, Elisa Ficarra, Michele Caselle & Enzo Medico",
+        "title": "MicroRNA-mRNA interactions underlying colorectal cancer molecular subtypes.",
+        "journal": "Nature Communications",
+        "year": "2015",
+        "link": "http://www.nature.com/articles/ncomms9878"
+    },
+    {
+        "author": "Alberto Colliva, Roberto Pellegrini, Alessandro Testori, Michele Caselle",
+        "title": "Ising-model description of long-range correlations in DNA sequences.",
+        "journal": "Physical Review E, Statistical, nonlinear, and soft matter Physics",
+        "year": "2015",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/26066195"
+    },
+    {
+        "author": "Matteo Osella, Andrea Riba, Alessandro Testori, Davide Corà, Michele Caselle",
+        "title": "Interplay of microRNA and epigenetic regulation in the human regulatory network.",
+        "journal": "Frontiers in Genetics",
+        "year": "2014",
+        "link": "http://journal.frontiersin.org/journal/10.3389/fgene.2014.00345/full"
+    },
+    {
+        "author": "Anna De Grassi, Fabio Iannelli, Matteo Cereda, Sara Volorio, Valentina Melocchi, Alessandra Viel, Gianluca Basso, Luigi Laghi, Michele Caselle, Francesca D Ciccarelli",
+        "title": "Deep sequencing of the X chromosome reveals the proliferation history of colorectal adenomas.",
+        "journal": "Genome Biol",
+        "year": "2014",
+        "link": "http://genomebiology.com/content/15/8/437"
+    },
+    {
+        "author": "Andrea Riba, Carla Bosia, Mariama El Baroudi, Laura Ollino, Michele Caselle",
+        "title": "A combination of transcriptional and microRNA regulation improves the stability of the relative concentrations of target genes.",
+        "journal": "PLoS Computational Biology",
+        "year": "2014",
+        "link": "http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003490"
+    },
+    {
+        "author": "Alessandro Testori, Livia Caizzi, Santina Cutrupi, Olivier Friard, Michele De Bortoli, Davide Corà, Michele Caselle ",
+        "title": "The role of Transposable Elements in shaping the combinatorial interaction of Transcription Factors.",
+        "journal": "BMC Genomics",
+        "year": "2012",
+        "link": "http://www.biomedcentral.com/1471-2164/13/400"
+    },
+    {
+        "author": "Matteo Osella, Carla Bosia, Davide Corà, Michele Caselle",
+        "title": "The Role of Incoherent MicroRNA-Mediated Feedforward Loops in Noise Buffering.",
+        "journal": "PLoS Computational Biology",
+        "year": "2011",
+        "link": "http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1001101"
+    },
+    {
+        "author": "Carla Bosia, Matteo Osella, Mariama El Baroudi, Davide Corà, Michele Caselle",
+        "title": "Gene autoregulation via intronic microRNAs and its functions.",
+        "journal": "BMC System Biology",
+        "year": "2012",
+        "link": "http://www.biomedcentral.com/1752-0509/6/131"
+    },
+    {
+        "author": "Angela Re, Davide Corà, Daniela Taverna, Michele Caselle",
+        "title": "Genome-wide survey of microRNA-transcription factor feed-forward regulatory circuits in human.",
+        "journal": "Molecular BioSystems",
+        "year": "2009",
+        "link": "http://www.rsc.org/publishing/journals/MB/article.asp?doi=b900177h"
+    }
+]
+
