@@ -8,7 +8,7 @@ Our research site serves as a platform to showcase our group's projects, publica
 
 ## Website
 
-The live version of this research site is hosted on GitHub Pages and can be accessed [here](https://biophystorino.github.io/).
+The live version of this research site is hosted on GitHub Pages and can be accessed [here](https://biophys-turin.github.io/).
 
 ## License
 © 2024. This work is openly licensed via [CC BY-NC-SA 4.0 DEED](https://creativecommons.org/licenses/by-nc-sa/4.0/)
