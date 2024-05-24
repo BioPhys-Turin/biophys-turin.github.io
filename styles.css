@@ -667,6 +667,7 @@ nav {
 }
 
 footer {
+    min-height: 280px;
     font-size: 0.8rem;
     text-align: center;
     padding: 20px 0;
