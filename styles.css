@@ -492,7 +492,7 @@ nav {
 
 .hero {
     height: 80vh; /* Full viewport height */
-    background-image: url('images/protein2.jpg'); /* Specify the path to your background image */
+    background-image: url('images/protein.jpg'); /* Specify the path to your background image */
     background-size: cover; /* Ensures the image covers the entire container */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
