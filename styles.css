@@ -757,7 +757,7 @@ footer a:hover {
 }
 
 .loading img {
-    width: 100px; /* adjust the size of your loading GIF */
+    width: 60px; /* adjust the size of your loading GIF */
     height: auto;
 }
 
