@@ -493,13 +493,16 @@ nav {
 .hero {
     height: 80vh; /* Full viewport height */
     background-image: url('images/protein2.jpg'); /* Specify the path to your background image */
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff; /* Text color for overlay */
+    padding: 20px; /* Optional padding */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 
