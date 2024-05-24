@@ -659,6 +659,11 @@ nav {
     width: auto; /* Maintain aspect ratio */
 }
 
+#footer-container {
+    min-height: 150px; /* Adjust based on the actual footer height */
+    background-color: #f8f9fa; /* Optional: To visualize reserved space */
+}
+
 footer {
     font-size: 0.8rem;
     text-align: center;
