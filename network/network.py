@@ -120,7 +120,6 @@ with open("../files/researchers-former.json", "r") as f:
 for researcher in researchers:
     former.append(researcher["name"])
     
-print(former)
 
 with open("../papers/paper.json", "r") as f:
     papers = json.load(f)
@@ -128,7 +127,8 @@ with open("../papers/paper.json", "r") as f:
 for paper in papers:
     net.add_paper(paper["title"], paper["author"].split(", "), link=paper["link"])
 
-    
+print(group)
+print(sorted(net.authors.keys()))
 print(former)
 
 nx.draw(net.G, node_color=net._get_group())
