@@ -13361,7 +13361,7 @@
 
 <body style="background-color: rgba(255, 255, 255, 0.808);">
     <div id="htmlwidget_container">
-        <div id="htmlwidget" class="forceNetwork html-widget" style="width:500px;height:400px;">
+        <div id="htmlwidget" class="forceNetwork html-widget" style="width:1200px;height:500px;">
         </div>
     </div>
     <script type="application/json" data-for="htmlwidget">
