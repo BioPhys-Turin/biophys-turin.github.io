@@ -79,6 +79,15 @@ body {
     cursor: pointer;
 }
 
+.mission-network {
+    display: flex;
+    width: 70%;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
 /* CSS for the larger image display */
 #lightbox {
     position: fixed;
@@ -155,6 +164,11 @@ body {
     .mission-item {
         flex: none; /* Reset flex property to default (no flex) */
         width: 100%; /* Set width to 100% for full width on smaller screens */
+    }
+
+    .mission-network {
+        flex: none;
+        width: 100%;
     }
 
     .mission-image {
