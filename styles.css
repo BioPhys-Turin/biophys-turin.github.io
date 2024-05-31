@@ -150,10 +150,9 @@ body {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
 
-    body {
-        font-family: Roboto;
+    .hide-on-mobile {
+        display: none !important;
     }
-    
 
     #mission {
         flex-direction: column; /* Stack missions vertically on smaller screens */
