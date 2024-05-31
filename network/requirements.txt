@@ -1,0 +1,6 @@
+networkx
+matplotlib
+urllib3<2
+requests
+beautifulsoup4
+scholarly
