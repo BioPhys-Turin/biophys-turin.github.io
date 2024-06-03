@@ -10,5 +10,12 @@ Our research site serves as a platform to showcase our group's projects, publica
 
 The live version of this research site is hosted on GitHub Pages and can be accessed [here](https://biophys-turin.github.io/).
 
+## How to edit
+
+- Add a member: add its profile to `files/researchers.json` and its image to `images/profiles/`
+- Moving a member to inactive: move its profiel from `files/researchers.json` to `files/researchers-former.json`
+- Adding a news: add a field to `files/news.json`
+- For everything else ask either Federico or Filippo
+
 ## License
 © 2024. This work is openly licensed via [CC BY-NC-SA 4.0 DEED](https://creativecommons.org/licenses/by-nc-sa/4.0/)
