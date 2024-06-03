@@ -780,3 +780,28 @@ footer a:hover {
     display: none; /* hide content by default */
 }
 
+/* Styles for 404 page */
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.error-page h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.error-page p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.error-page a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
