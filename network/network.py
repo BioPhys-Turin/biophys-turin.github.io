@@ -108,20 +108,20 @@ class Network:
 
 net = Network()
 
-with open("../files/researchers.json", "r") as f:
+with open("./files/researchers.json", "r") as f:
     researchers = json.load(f)
     
 for researcher in researchers:
     group.append(researcher["name"])
     
-with open("../files/researchers-former.json", "r") as f:
+with open("./files/researchers-former.json", "r") as f:
     researchers = json.load(f)
     
 for researcher in researchers:
     former.append(researcher["name"])
     
 
-with open("../papers/paper.json", "r") as f:
+with open("./papers/paper.json", "r") as f:
     papers = json.load(f)
     
 for paper in papers:
@@ -133,10 +133,10 @@ print(former)
 
 nx.draw(net.G, node_color=net._get_group())
 
-with open("network.html.template", "r") as f:    
+with open("network/network.html.template", "r") as f:    
     template = f.read()
     
 template = template.replace("TOREPLACE_NETWORK", str(net))
 
-with open("network.html", "w") as f:
+with open("network/network.html", "w") as f:
     f.write(template)
