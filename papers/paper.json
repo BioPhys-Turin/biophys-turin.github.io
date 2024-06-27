@@ -1,5 +1,16 @@
 [   
     {
+      "type": "misc",
+      "title": "Ranking nodes in bipartite systems with a non-linear iterative map",
+      "link": "https://arxiv.org/abs/2406.17572",
+      "urldate": "2024-06-27",
+      "journal": "arXiv",
+      "author": "Andrea Mazzolini, Michele Caselle, Matteo Osella",
+      "month": "jun",
+      "year": "2024"
+
+    },
+    {
         "type": "article",
         "title": "The dynamics of aerotaxis in a simple eukaryotic model",
         "volume": "9",
