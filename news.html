@@ -49,10 +49,26 @@
     <div class="content">
         <script src="scripts/loading.js"></script>
 
-        <div class="news-container">
-            <a class="twitter-timeline" data-lang="en" data-dnt="true" href="https://twitter.com/BiophysTorino?ref_src=twsrc%5Etfw">Tweets by BiophysTorino</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-   
+        <div class="news-container" id="tweets">
         </div>
+
+        <script>
+            function displayTweets(tweets) {
+            const tweetsContainer = document.getElementById('tweets');
+            tweetsContainer.innerHTML = '';
+
+            tweets.forEach(tweetId => {
+                const tweetDiv = document.createElement('div');
+                tweetDiv.className = 'tweet-container';
+                tweetDiv.innerHTML = `<iframe src="https://twitframe.com/show?url=https%3A%2F%2Ftwitter.com%2FBiophys%2Fstatus%2F${tweetId}"></iframe>`;
+                tweetsContainer.appendChild(tweetDiv);
+            });
+            }
+
+            // Example usage with static tweet IDs
+            const staticTweetIds = ['1806350030795604311', '1806336298531086425'];
+            displayTweets(staticTweetIds);
+        </script>
 
         <div id="footer-container"></div>
     </div>
