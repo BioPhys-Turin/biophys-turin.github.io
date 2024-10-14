@@ -12,6 +12,17 @@
     },
     {
       "type": "misc",
+      "title": "Topic Modeling analysis of the Allen Human Brain Atlas",
+      "link": "https://www.biorxiv.org/content/10.1101/2024.10.11.617855v1",
+      "urldate": "2024-06-27",
+      "journal": "arXiv",
+      "author": "Letizia Pizzini, Filippo Valle, Matteo Osella, Michele Caselle",
+      "month": "oct",
+      "year": "2024"
+
+    },
+    {
+      "type": "misc",
       "title": "Ranking nodes in bipartite systems with a non-linear iterative map",
       "link": "https://arxiv.org/abs/2406.17572",
       "urldate": "2024-06-27",
