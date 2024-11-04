@@ -1,6 +1,17 @@
 [  
     {
       "type": "misc",
+      "title": "Exploring the latent space of transcriptomic data with topic modeling",
+      "link": "https://doi.org/10.1101/2024.10.31.621233",
+      "urldate": "2024-11-03",
+      "journal": "biorxiv",
+      "author": "Filippo Valle, Michele Caselle, Matteo Osella",
+      "month": "oct",
+      "year": "2024"
+
+    },
+    {
+      "type": "misc",
       "title": "The intrinsic dimension of gene expression during cell differentiation",
       "link": "https://www.biorxiv.org/content/10.1101/2024.08.02.606382v1.full",
       "urldate": "2024-08-17",
