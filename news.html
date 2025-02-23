@@ -50,27 +50,10 @@
         <script src="scripts/loading.js"></script>
 
         <div class="news-container" id="tweets">
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-35162580-058c-4825-abc5-39063273489d" data-elfsight-app-lazy></div>
         </div>
-
-        <script>
-            function displayTweets(tweets) {
-            const tweetsContainer = document.getElementById('tweets');
-            tweetsContainer.innerHTML = '';
-
-            tweets.forEach(tweetId => {
-                const tweetDiv = document.createElement('div');
-                tweetDiv.className = 'tweet-container';
-                tweetDiv.innerHTML = `<iframe src="https://twitframe.com/show?url=https%3A%2F%2Ftwitter.com%2FBiophys%2Fstatus%2F${tweetId}"></iframe>`;
-                tweetsContainer.appendChild(tweetDiv);
-            });
-            }
-
-            // Example usage with static tweet IDs
-            const staticTweetIds = ['1824810287674937510',
-            '1806350030795604311', '1806336298531086425', '1853378348937789532'];
-            displayTweets(staticTweetIds);
-        </script>
-
+        
         <div id="footer-container"></div>
     </div>
 
