@@ -1,5 +1,7 @@
 import networkx as nx
 import json
+import os
+os.chdir("../")
 
 G = nx.Graph()
 
