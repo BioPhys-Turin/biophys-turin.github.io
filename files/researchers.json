@@ -41,20 +41,6 @@
             "personal-page": "https://fvalle.online"
         }
     },
-    
-    {
-        "name": "Letizia Pizzini",
-        "title": "PhD Student",
-        "description": "My main interest lies in quantitative analysis of biological Systems, focusing on multiomics data integration, EEG and brain image data interpretation",
-        "image": "images/profiles/Pizzini.jpg",
-        "socials": {
-            "mail": "letizia.pizzini@unito.it",
-            "github": "https://github.com/letiziapizzini",
-            "linkedin": "https://linkedin.com/in//letizia-pizzini-ba9a061b6",
-            "twitter": "https://twitter.com/lpizziniBioPhys"
-        }
-    },
-
     {
         "name": "Davide Pirovano",
         "title": "PhD Student",
