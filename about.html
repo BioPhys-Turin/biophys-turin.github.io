@@ -33,6 +33,14 @@
         insights.init('qaV_PKC3Yd31nr1Z');
         insights.trackPages();
     </script>
+    <script src="https://kit.fontawesome.com/411fe6edaf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+    <script src="scripts/leaflet.awesome-markers.js"></script>
 </head>
 <body>
     <header>
@@ -151,7 +159,9 @@
         
         <section id="mission" class="hide-on-mobile">
             <div class="mission-item">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.6610685444607!2d7.678848026251614!3d45.052099321070216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d453ba6a8a9%3A0x1809005502825fc2!2sDipartimento%20di%20Fisica%20-%20Universit%C3%A0%20degli%20Studi%20di%20Torino!5e0!3m2!1sit!2sit!4v1721378374087!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="map" style="height:360px"></div>
+
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.6610685444607!2d7.678848026251614!3d45.052099321070216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d453ba6a8a9%3A0x1809005502825fc2!2sDipartimento%20di%20Fisica%20-%20Universit%C3%A0%20degli%20Studi%20di%20Torino!5e0!3m2!1sit!2sit!4v1721378374087!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             </div>
             <div class="mission-item">
                 <h2>Where to find us</h2>
@@ -168,5 +178,23 @@
     <script src="scripts/footer.js" defer></script>
     <!-- JavaScript snippet to remove .html extension -->
     <script src="scripts/url-manip.js"> </script>
+    <script>
+        var map = L.map('map').setView([45.05232742060916, 7.681427509114751], 20);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        var redMarker = L.AwesomeMarkers.icon({
+                icon: 'envelope',
+                prefix: 'fa',
+                iconColor: 'white',
+                markerColor: 'darkpurple'
+            });
+        var marker = L.marker([45.05232742060916, 7.681427509114751], {icon: redMarker}).addTo(map);
+        var popup = L.popup()
+                .setLatLng([45.0524072060916, 7.681427509114751])
+                .setContent("Via Pietro Giuria 1, Torino, Italy")
+                .openOn(map);
+    </script>
 </body>
 </html>

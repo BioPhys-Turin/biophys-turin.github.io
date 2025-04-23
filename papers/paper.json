@@ -9,6 +9,14 @@
       "month": "jan",
       "year": "2025"
     },
+    { "title": "Topic Modeling analysis of the Allen Human Brain Atlas",
+      "link": "https://www.nature.com/articles/s41598-025-91079-9",
+      "urldate": "2025-02-26",
+      "journal": "Scientific Reports",
+      "author": "Letizia Pizzini, Filippo Valle, Matteo Osella, Michele Caselle",
+      "month": "feb",
+      "year": "2025"
+    },
     {
       "type": "misc",
       "title": "Exploring the latent space of transcriptomic data with topic modeling",
@@ -18,17 +26,6 @@
       "author": "Filippo Valle, Michele Caselle, Matteo Osella",
       "month": "oct",
       "year": "2024"
-    },
-    {
-      "type": "misc",
-      "title": "Topic Modeling analysis of the Allen Human Brain Atlas",
-      "link": "https://www.biorxiv.org/content/10.1101/2024.10.11.617855v1",
-      "urldate": "2024-06-27",
-      "journal": "bioRxiv",
-      "author": "Letizia Pizzini, Filippo Valle, Matteo Osella, Michele Caselle",
-      "month": "oct",
-      "year": "2024"
-
     },
     {
       "type": "misc",
