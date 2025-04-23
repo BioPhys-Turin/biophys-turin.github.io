@@ -1,6 +1,16 @@
 [  
     {
       "type": "misc",
+      "title": "Ohno-miRNAs: intragenic miRNA pairs derived from whole-genome duplication",
+      "link": "https://doi.org/10.1101/2025.01.16.632905",
+      "urldate": "2025-01-18",
+      "journal": "biorxiv",
+      "author": "Leonardo Agasso, Ivan Molineris, Michele Caselle",
+      "month": "jan",
+      "year": "2025"
+    },
+    {
+      "type": "misc",
       "title": "Exploring the latent space of transcriptomic data with topic modeling",
       "link": "https://doi.org/10.1101/2024.10.31.621233",
       "urldate": "2024-11-03",
