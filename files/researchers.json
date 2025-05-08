@@ -93,6 +93,7 @@
         "name": "Andrea Mazzolini",
         "title": "Visiting",
         "image": "./images/profiles/mazzolini.png",
+        "description": "Discoverer of the Mazzolini's theorem",
         "socials": {
             "mail": "andrea.mazzolini@studenti.unito.it",
             "linkedin": "https://www.linkedin.com/in/andrea-mazzolini-bb71a189/"
