@@ -24,18 +24,21 @@
     <link rel="preload" href="/scripts/footer.js" as="script">
     <link rel="preload" href="/scripts/images.js" as="script">
     <link rel="preload" href="/scripts/url-manip.js" as="script">
+    <link rel="preload" href="/scripts/map.js" as="script">
     <link rel="preload" href="styles.css" as="style" />
 
     <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="
+                default-src 'self'; 
+                script-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com;
+                style-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com https://code.ionicframework.com https://maxcdn.bootstrapcdn.com;
+                img-src 'self' data: https://tile.openstreetmap.org;
+                font-src 'self' https://code.ionicframework.com;
+        ">
     
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://getinsights.io/js/insights.js"></script>
-    <script>
-        insights.init('qaV_PKC3Yd31nr1Z');
-        insights.trackPages();
-    </script>
+
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -124,23 +127,6 @@
     <script src="scripts/footer.js" defer></script>
     <!-- JavaScript snippet to remove .html extension -->
     <script src="scripts/url-manip.js"> </script>
-    <script>
-        var map = L.map('map').setView([45.05232742060916, 7.681427509114751], 20);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-        var redMarker = L.AwesomeMarkers.icon({
-                icon: 'envelope',
-                prefix: 'fa',
-                iconColor: 'white',
-                markerColor: 'darkpurple'
-            });
-        var marker = L.marker([45.05232742060916, 7.681427509114751], {icon: redMarker}).addTo(map);
-        var popup = L.popup()
-                .setLatLng([45.0524072060916, 7.681427509114751])
-                .setContent("Via Pietro Giuria 1, Torino, Italy")
-                .openOn(map);
-    </script>
+    <script src="scripts/map.js"></script>
 </body>
 </html>
