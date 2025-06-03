@@ -1,10 +1,21 @@
 [  
+    
+    {
+      "type": "misc",
+      "title": "Cartan Networks: Group theoretical Hyperbolic Deep Learning",
+      "link": "https://doi.org/10.48550/arXiv.2505.24353",
+      "urldate": "2025-05-30",
+      "journal": "arXiv",
+      "author": "Federico Milanesio, Matteo Santoro, Pietro G. Fré, Guido Sanguinetti",
+      "month": "may",
+      "year": "2025"
+    },
     {
       "type": "misc",
       "title": "Ohno-miRNAs: intragenic miRNA pairs derived from whole-genome duplication",
       "link": "https://doi.org/10.1101/2025.01.16.632905",
       "urldate": "2025-01-18",
-      "journal": "biorxiv",
+      "journal": "bioRxiv",
       "author": "Leonardo Agasso, Ivan Molineris, Michele Caselle",
       "month": "jan",
       "year": "2025"
