@@ -36,7 +36,7 @@ nav ul li a {
     text-decoration: none;
 }
 body {
-    font-family: Roboto, Arial;
+    font-family: Roboto, Arial, sans-serif;
     color: #333;
 }
 .container {
