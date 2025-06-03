@@ -253,7 +253,6 @@ p.description {
         width: 100%;
     }
     .researcher_info {
-        flex-grow: 1;
         flex: 1;
         max-width: 80%;
     }
