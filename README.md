@@ -18,4 +18,4 @@ The live version of this research site is hosted on GitHub Pages and can be acce
 - For everything else ask either Federico or Filippo
 
 ## License
-© 2024. This work is openly licensed via [CC BY-NC-SA 4.0 DEED](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+© 2025. This work is openly licensed via [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
