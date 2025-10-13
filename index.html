@@ -32,7 +32,14 @@
     <meta name="revisit-after" content="14 days">
 
     <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="
+                default-src 'self'; 
+                script-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com;
+                style-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com https://code.ionicframework.com https://maxcdn.bootstrapcdn.com;
+                img-src 'self' data: https://tile.openstreetmap.org;
+                font-src 'self' https://code.ionicframework.com;
+        ">
+    
 
     <link rel="preload" href="/scripts/loading.js" as="script">
     <link rel="preload" href="/scripts/nav.js" as="script">
