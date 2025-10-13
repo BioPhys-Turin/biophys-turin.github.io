@@ -1,7 +1,7 @@
 [  
     {
       "type":"misc",
-      "title"="Should We Always Train Models on Fine-Grained Classes?", 
+      "title":"Should We Always Train Models on Fine-Grained Classes?", 
       "link":"https://doi.org/10.48550/arXiv.2509.05130",
       "author":"Davide Pirovano, Federico Milanesio, Michele Caselle, Piero Fariselli, Matteo Osella",
       "year":"2025",
