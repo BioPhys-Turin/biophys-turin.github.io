@@ -1,5 +1,34 @@
 [  
-    
+    {
+      "type":"misc",
+      "title"="Should We Always Train Models on Fine-Grained Classes?", 
+      "link":"https://doi.org/10.48550/arXiv.2509.05130",
+      "author":"Davide Pirovano, Federico Milanesio, Michele Caselle, Piero Fariselli, Matteo Osella",
+      "year":"2025",
+      "month":"nov",
+      "journal":"arXiv",
+      "urldate":"2025-09-05"
+    },
+    {
+      "type": "misc",
+      "title": "Tessellation Groups, Harmonic Analysis on Non-compact Symmetric Spaces and the Heat Kernel in view of Cartan Convolutional Neural Networks ",
+      "link": "https://doi.org/10.48550/arXiv.2508.16015",
+      "urldate": "2025-08-22",
+      "journal": "arXiv",
+      "author": "Pietro G. Fré, Federico Milanesio, Marcelo Oyarzo, Matteo Santoro, Mario Trigiante",
+      "month": "aug",
+      "year": "2025"
+    },
+    {
+      "type": "misc",
+      "title": "Navigation through Non-Compact Symmetric Spaces: a mathematical perspective on Cartan Neural Networks",
+      "link": "https://doi.org/10.48550/arXiv.2507.16871",
+      "urldate": "2025-07-22",
+      "journal": "arXiv",
+      "author": "Federico Milanesio, Matteo Santoro, Pietro G. Fré, Guido Sanguinetti",
+      "month": "jul",
+      "year": "2025"
+    },
     {
       "type": "misc",
       "title": "Cartan Networks: Group theoretical Hyperbolic Deep Learning",
