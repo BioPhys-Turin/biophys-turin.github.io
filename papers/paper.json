@@ -40,17 +40,16 @@
       "year": "2025"
     },
     {
-      "type": "misc",
+      "type": "article",
       "title": "Ohno-miRNAs: intragenic miRNA pairs derived from whole-genome duplication",
       "link": "https://pubmed.ncbi.nlm.nih.gov/41336284/",
       "urldate": "2025-12-01",
-      "journal": " PLoS Comput Biol",
+      "journal": " PLoS Comput Biol.",
       "author": "Leonardo Agasso, Ivan Molineris, Michele Caselle",
       "month": "dec",
       "year": "2025",
       "vol": "21",
       "number": "1",
-      "pages": "e1013766",
     },
     { 
       "type": "article",
