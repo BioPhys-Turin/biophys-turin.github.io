@@ -1,5 +1,15 @@
 [  
-    {
+  {
+    "type": "misc",
+    "title": "Integration of single-cell multi-omic data with graph-based topic modelling",
+    "link": "https://doi.org/10.64898/2026.02.25.707947",
+    "author": "Gabriele Malagoli, Filippo Valle, Andreina Tirabassi, Annalisa Marsico, Loredana Martignetti, Michele Caselle, Maria Colomé-Tatché",
+    "year": "2026",
+    "month": "feb",
+    "journal": "bioRxiv",
+    "urldate": "2026-02-26"
+  },  
+  {
       "type":"misc",
       "title":"Should We Always Train Models on Fine-Grained Classes?", 
       "link":"https://doi.org/10.48550/arXiv.2509.05130",
@@ -42,11 +52,11 @@
     {
       "type": "misc",
       "title": "Ohno-miRNAs: intragenic miRNA pairs derived from whole-genome duplication",
-      "link": "https://doi.org/10.1101/2025.01.16.632905",
-      "urldate": "2025-01-18",
-      "journal": "bioRxiv",
+      "link": "https://doi.org/10.1371/journal.pcbi.1013766",
+      "urldate": "2025-12-03",
+      "journal": "PLoS Computational Biology",
       "author": "Leonardo Agasso, Ivan Molineris, Michele Caselle",
-      "month": "jan",
+      "month": "dec",
       "year": "2025"
     },
     { 
@@ -77,12 +87,12 @@
     {
       "type": "misc",
       "title": "The intrinsic dimension of gene expression during cell differentiation",
-      "link": "https://www.biorxiv.org/content/10.1101/2024.08.02.606382v1.full",
-      "urldate": "2024-08-17",
+      "link": "https://doi.org/10.1093/nar/gkaf805",
+      "urldate": "2025-08-30",
       "journal": "bioRxiv",
       "author": "Niccolò Cirone, Marta Biondo, Filippo Valle, Silvia Lazzardi, Michele Caselle, Matteo Osella",
       "month": "aug",
-      "year": "2024"
+      "year": "2025"
 
     },
     {
