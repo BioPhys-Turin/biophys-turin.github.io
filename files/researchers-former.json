@@ -1,5 +1,15 @@
 [
     {
+        "name": "Davide Pirovano",
+        "title": "PhD Student",
+        "description": "Have you ever asked yourself if becoming a bird-watching champion would help you to distinguish a parrot from a go-kart? Well, it turns out that sometimes it can be useful when training Neural Networks. My PhD research essentially focuses on that “sometimes”",
+        "image": "images/profiles/davide.jpeg",
+        "socials": {
+            "mail": "davide.pirovano@unito.it",
+            "linkedin": "https://www.linkedin.com/in/davide-pirovano-07aba5220/"
+        }
+    },
+    {
         "name": "Letizia Pizzini",
         "title": "PhD Student",
         "description": "My main interest lies in quantitative analysis of biological Systems, focusing on multiomics data integration, EEG and brain image data interpretation",
@@ -39,6 +49,50 @@
         }
     },
     {
+        "name": "Francesco Mottes",
+        "title": "PhD Student",
+        "image": "./images/profiles/mottes.jpg",
+        "socials": {
+            "mail": "francesco.mottes@unito.it",
+            "linkedin": "https://www.linkedin.com/in/francesco-mottes"
+        }
+    },
+    {
+        "name": "Eleonora Andreotti",
+        "title": "Post-Doc",
+        "image": "./images/profiles/eandreot.jpg",
+        "socials": {
+            "mail": "eleonora.andreotti@unito.it",
+            "linkedin": "https://www.linkedin.com/in/eleonora-andreotti-5b3898168"
+        }
+    },
+    {
+        "name": "Mattia Furlan",
+        "title": "PhD Student",
+        "image": "./images/profiles/furlan.jpeg",
+        "socials": {
+            "mail": "mattia.furlan@unito.it",
+            "linkedin": "https://www.linkedin.com/in/mattia-furlan-277527171/"
+        }
+    },
+    {
+        "name": "Elisa Reale",
+        "title": "PhD Student",
+        "image": "./images/profiles/reale2.jpg",
+        "socials": {
+            "mail": "elisa.reale@unito.it"
+        }
+    },
+    {
+        "name": "Alberto Colliva",
+        "title": "PhD Student",
+        "image": "./images/profiles/colliva2.jpg",
+        "socials": {
+            "mail": "colliva@to.infn.it",
+            "linkedin": "https://www.linkedin.com/in/acolliva/"
+        }
+    },
+    {
         "name": "Maria Fumagalli",
         "title": "PhD Student",
         "image": "./images/profiles/fumagalli.jpg",
@@ -62,50 +116,6 @@
         "socials": {
             "mail": "antonio.rosanova@gmail.com",
             "linkedin": "https://www.linkedin.com/in/antonio-rosanova-27b49988/"
-        }
-    },
-    {
-        "name": "Alberto Colliva",
-        "title": "PhD Student",
-        "image": "./images/profiles/colliva2.jpg",
-        "socials": {
-            "mail": "colliva@to.infn.it",
-            "linkedin": "https://www.linkedin.com/in/acolliva/"
-        }
-    },
-    {
-        "name": "Elisa Reale",
-        "title": "PhD Student",
-        "image": "./images/profiles/reale2.jpg",
-        "socials": {
-            "mail": "elisa.reale@unito.it"
-        }
-    },
-    {
-        "name": "Mattia Furlan",
-        "title": "PhD Student",
-        "image": "./images/profiles/furlan.jpeg",
-        "socials": {
-            "mail": "mattia.furlan@unito.it",
-            "linkedin": "https://www.linkedin.com/in/mattia-furlan-277527171/"
-        }
-    },
-    {
-        "name": "Francesco Mottes",
-        "title": "PhD Student",
-        "image": "./images/profiles/mottes.jpg",
-        "socials": {
-            "mail": "francesco.mottes@unito.it",
-            "linkedin": "https://www.linkedin.com/in/francesco-mottes"
-        }
-    },
-    {
-        "name": "Eleonora Andreotti",
-        "title": "Post-Doc",
-        "image": "./images/profiles/eandreot.jpg",
-        "socials": {
-            "mail": "eleonora.andreotti@unito.it",
-            "linkedin": "https://www.linkedin.com/in/eleonora-andreotti-5b3898168"
         }
     }
 ]

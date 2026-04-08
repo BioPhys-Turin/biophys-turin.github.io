@@ -40,17 +40,6 @@
         }
     },
     {
-        "name": "Davide Pirovano",
-        "title": "PhD Student",
-        "description": "Have you ever asked yourself if becoming a bird-watching champion would help you to distinguish a parrot from a go-kart? Well, it turns out that sometimes it can be useful when training Neural Networks. My PhD research essentially focuses on that “sometimes”",
-        "image": "images/profiles/davide.jpeg",
-        "socials": {
-            "mail": "davide.pirovano@unito.it",
-            "linkedin": "https://www.linkedin.com/in/davide-pirovano-07aba5220/"
-        }
-    },
-    
-    {
         "name": "Federico Milanesio",
         "title": "PhD Student",
         "description": "I mostly study neural networks dynamics and Markov chains, but I have a whole theory on the statistical mechanics of foosball Elos I can't wait to tell you about",
@@ -75,7 +64,6 @@
             "twitter": "https://twitter.com/AgassoLeonardo"
         }
     },
-
     {
         "name": "Niccolò Cirone",
         "title": "PhD Student",
@@ -86,7 +74,16 @@
             "github": "https://github.com/niccociro",
             "linkedin": "https://www.linkedin.com/in/niccol%C3%B2-cirone-22548a168/"
         }
-    },    
+    },
+    {
+        "name": "Samuele Marabotto",
+        "title": "PhD Student",
+        "description": "",
+        "image": "images/profiles/samuele.jpg",
+        "socials": {
+            "mail": "samuele.marabotto@unito.it"
+        }
+    },
     {
         "name": "Andrea Mazzolini",
         "title": "Visiting",
