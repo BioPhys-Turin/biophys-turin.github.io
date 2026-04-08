@@ -5,12 +5,11 @@
         "image": "images/profiles/michele.jpeg",
         "description": "Interested in Statistical Mechanics and Quantum Field Theory, with a side of Quantitative Biology",
         "socials": {
-            "mail": "michele.caselle@to.infn.it",
+            "mail": "michele.caselle@unito.it",
             "github": "https://github.com/mcaselle",
             "linkedin": "https://www.linkedin.com/in/michele-caselle-17107613/",
-            "publications": "https://pubmed.ncbi.nlm.nih.gov/?term=caselle+michele",
-            "personal-page": "http://personalpages.to.infn.it/~caselle/"
-        }
+            "publications": "https://pubmed.ncbi.nlm.nih.gov/?term=caselle+michele"
+             }
     },
     
     {
