@@ -1,7 +1,7 @@
 [
     {
         "name": "Davide Pirovano",
-        "title": "PhD Student",
+        "title": "PhD student",
         "description": "Have you ever asked yourself if becoming a bird-watching champion would help you to distinguish a parrot from a go-kart? Well, it turns out that sometimes it can be useful when training Neural Networks. My PhD research essentially focuses on that “sometimes”",
         "image": "images/profiles/davide.jpeg",
         "socials": {
@@ -11,7 +11,7 @@
     },
     {
         "name": "Letizia Pizzini",
-        "title": "PhD Student",
+        "title": "PhD",
         "description": "My main interest lies in quantitative analysis of biological Systems, focusing on multiomics data integration, EEG and brain image data interpretation",
         "image": "images/profiles/Pizzini.jpg",
         "socials": {
@@ -23,7 +23,7 @@
     },
     {
         "name": "Marta Biondo",
-        "title": "PhD Student",
+        "title": "Postdoc",
         "image": "./images/profiles/biondo.jpg",
         "socials": {
             "mail": "marta.biondo@unito.it",
@@ -32,7 +32,7 @@
     },
     {
         "name": "Silvia Lazzardi",
-        "title": "PhD Student",
+        "title": "PhD",
         "image": "./images/profiles/Lazzardi.jpg",
         "socials": {
             "mail": "Silvia.Lazzardi@unito.it",
@@ -50,7 +50,7 @@
     },
     {
         "name": "Francesco Mottes",
-        "title": "PhD Student",
+        "title": "PhD",
         "image": "./images/profiles/mottes.jpg",
         "socials": {
             "mail": "francesco.mottes@unito.it",
@@ -68,7 +68,7 @@
     },
     {
         "name": "Mattia Furlan",
-        "title": "PhD Student",
+        "title": "PhD",
         "image": "./images/profiles/furlan.jpeg",
         "socials": {
             "mail": "mattia.furlan@unito.it",
@@ -77,7 +77,7 @@
     },
     {
         "name": "Elisa Reale",
-        "title": "PhD Student",
+        "title": "PhD",
         "image": "./images/profiles/reale2.jpg",
         "socials": {
             "mail": "elisa.reale@unito.it"
@@ -85,7 +85,7 @@
     },
     {
         "name": "Alberto Colliva",
-        "title": "PhD Student",
+        "title": "PhD",
         "image": "./images/profiles/colliva2.jpg",
         "socials": {
             "mail": "colliva@to.infn.it",
@@ -94,7 +94,7 @@
     },
     {
         "name": "Maria Fumagalli",
-        "title": "PhD Student",
+        "title": "PhD",
         "image": "./images/profiles/fumagalli.jpg",
         "socials": {
             "mail": "mariarita.fumagalli@unito.it"
@@ -102,7 +102,7 @@
     },
     {
         "name": "Lorenzo Argante",
-        "title": "PhD Student",
+        "title": "PhD",
         "image": "./images/profiles/Argante.png",
         "socials": {
             "mail": "lorenzo.argante@unito.it",
@@ -111,7 +111,7 @@
     },
     {
         "name": "Antonio Rosanova",
-        "title": "PhD Student",
+        "title": "PhD",
         "image": "./images/profiles/rosanova2.jpg",
         "socials": {
             "mail": "antonio.rosanova@gmail.com",
