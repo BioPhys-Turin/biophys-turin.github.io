@@ -1,4 +1,4 @@
-[  
+[ 
   {
     "type": "misc",
     "title": "Integration of single-cell multi-omic data with graph-based topic modelling",
@@ -8,7 +8,27 @@
     "month": "feb",
     "journal": "bioRxiv",
     "urldate": "2026-02-26"
-  },  
+  },
+  {
+    "type": "misc",
+    "title": "Alternative routes to universal diversity scaling in component systems: from proteomes to large language models",
+    "link": "https://doi.org/10.48550/arXiv.2607.02221",
+    "author": "Andrea Mazzolini, Leonardo Agasso, Filippo Valle, Michele Caselle, Marco Cosentino Lagomarsino, Matteo Osella",
+    "year": "2026",
+    "month": "jul",
+    "journal": "bioRxiv",
+    "urldate": "2026-07-02"
+  },
+  {
+    "type": "misc",
+    "title": "Component systems: Do null models explain everything?",
+    "link": "https://doi.org/10.1371/journal.pcsy.0000114",
+    "author": "Andrea Mazzolini, Mattia Corigliano, Rossana Droghetti, Matteo Osella, Marco Cosentino Lagomarsino",
+    "year": "2026",
+    "month": "jun",
+    "journal": "bioRxiv",
+    "urldate": "2026-06-30"
+  }, 
   {
       "type":"misc",
       "title":"The advantage of fine-grained training", 
