@@ -11,23 +11,25 @@
   },  
   {
       "type":"misc",
-      "title":"Should We Always Train Models on Fine-Grained Classes?", 
-      "link":"https://doi.org/10.48550/arXiv.2509.05130",
+      "title":"The advantage of fine-grained training", 
+      "link":"https://doi.org/10.1038/s41598-026-64362-6",
       "author":"Davide Pirovano, Federico Milanesio, Michele Caselle, Piero Fariselli, Matteo Osella",
-      "year":"2025",
-      "month":"nov",
-      "journal":"arXiv",
-      "urldate":"2025-09-05"
+      "year":"2026",
+      "month":"aug",
+      "journal":"Scientific Reports",
+      "urldate":"2026-09-18"
     },
     {
       "type": "misc",
-      "title": "Tessellation Groups, Harmonic Analysis on Non-compact Symmetric Spaces and the Heat Kernel in view of Cartan Convolutional Neural Networks ",
-      "link": "https://doi.org/10.48550/arXiv.2508.16015",
+      "title": "Tessellation Groups, Harmonic Analysis on Non-compact Symmetric Spaces and the Heat Kernel in view of Cartan Convolutional Neural Networks",
+      "link": "https://doi.org/10.1002/prop.70099",
       "urldate": "2025-08-22",
-      "journal": "arXiv",
+      "journal": "Fortschritte der Physik",
       "author": "Pietro G. Fré, Federico Milanesio, Marcelo Oyarzo, Matteo Santoro, Mario Trigiante",
-      "month": "aug",
-      "year": "2025"
+      "month": "apr",
+      "volume": "74",
+      "number": "4",
+      "year": "2026"
     },
     {
       "type": "misc",
