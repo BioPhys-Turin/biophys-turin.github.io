@@ -1,1 +1,3 @@
-networkx
+# Pinned with hash; update with: pip download networkx==X --no-deps && pip hash networkx-X-*.whl
+networkx==3.7 \
+    --hash=sha256:e3fd2c13a7814cee3746340d8d7f8598a67f16a58bf47fb7f8793fab6efca1b0
