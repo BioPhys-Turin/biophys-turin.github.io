@@ -2,11 +2,11 @@
     <a class="identity-logo" href="{{ '/' | relative_url }}">
         <img src="{{ '/images/biophys-colored.svg' | relative_url }}" height="647" width="1072" alt="INFN Biophys Turin">
     </a>
-    <div class="navbar-toggle" onclick="toggleNavbar()">
+    <button type="button" class="navbar-toggle" aria-label="Menu" aria-controls="navbarLinks" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-    </div>
+    </button>
     <ul class="navbar-links" id="navbarLinks">
         {%- assign links = "Home:/,About:/about,Researchers:/researchers,Papers:/papers,News:/news" | split: "," %}
         {%- for link in links %}

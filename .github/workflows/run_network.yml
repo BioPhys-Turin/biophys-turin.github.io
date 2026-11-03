@@ -27,7 +27,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install -r network/requirements.txt
+        run: pip install --only-binary :all: --require-hashes -r network/requirements.txt
 
       - name: Build network
         run: python network/network.py

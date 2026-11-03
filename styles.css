@@ -48,6 +48,10 @@ nav ul li a {
 .navbar-toggle {
     display: none;
     flex-direction: column;
+    margin: 0 auto;
+    padding: 4px;
+    border: 0;
+    background: none;
     cursor: pointer;
 }
 .navbar-toggle span {
