@@ -14,8 +14,8 @@
     
     {
         "name": "Matteo Osella",
-        "title": "Associate professor",
-        "image": "images/profiles/matteo.png",
+        "title": "Associate Professor",
+        "image": "images/profiles/matteo.jpg",
         "description": "I lead our projects in machine learning and systems biology, but my true passion are scaling laws",
         "socials": {
             "mail": "matteo.osella@unito.it",
@@ -42,7 +42,7 @@
         "name": "Federico Milanesio",
         "title": "PhD Student",
         "description": "I mostly study neural networks dynamics and Markov chains, but I have a whole theory on the statistical mechanics of foosball Elos I can't wait to tell you about",
-        "image": "images/profiles/fede1.png",
+        "image": "images/profiles/fede1.jpg",
         "socials": {
             "mail": "federico.milanesio@unito.it",
             "github": "https://github.com/FedericoMilanesio",
@@ -86,7 +86,7 @@
     {
         "name": "Andrea Mazzolini",
         "title": "Visiting",
-        "image": "./images/profiles/mazzolini.png",
+        "image": "images/profiles/mazzolini.png",
         "description": "Discoverer of the Mazzolini's theorem",
         "socials": {
             "mail": "andrea.mazzolini@studenti.unito.it",

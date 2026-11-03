@@ -1,7 +1,9 @@
+let papersData = [];
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const papersResponse = await fetch('papers/paper.json');
-        const papersData = await papersResponse.json();
+        papersData = await papersResponse.json();
 
         // Sort papers by date (assuming each paper has a "year" field)
         papersData.sort((a, b) => parseInt(b.year) - parseInt(a.year)); // Sort by most recent year first
@@ -9,9 +11,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         const papersListContainer = document.getElementById('papersList');
 
         // Render each paper
-        papersData.forEach(paper => {
+        papersData.forEach((paper, index) => {
             const paperDiv = document.createElement('div');
             paperDiv.classList.add('paper');
+            const venue = paper.journal || paper.booktitle || '';
 
             // Construct paper info HTML
             const paperInfoHTML = `
@@ -19,9 +22,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="paper-info">
                     <p><span class="author">${paper.author} (${paper.year})</span></p>
                     <p><a href="${paper.link}" target="_blank" class="paper-title">${paper.title}</a></p>
-                    <span class="journal">${paper.journal}${paper.volume ? ` ${paper.volume}` : ''}${paper.number ? `, ${paper.number}` : ''}</span>
+                    <span class="journal">${venue}${paper.volume ? ` ${paper.volume}` : ''}${paper.number ? `, ${paper.number}` : ''}</span>
                     <div class="cite-button">
-                        <button onclick="openCitePopup('${paper.title}', '${paper.author}', '${paper.journal}', '${paper.year}', '${paper.volume || ''}', '${paper.number || ''}', '${paper.pages    || ''}')">Cite</button>
+                        <button onclick="openCitePopup(${index})">Cite</button>
                     </div>
                 </div>
             `;
@@ -35,30 +38,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-function openCitePopup(title, author, journal, year, volume, number, pages) {
+function openCitePopup(index) {
+    const paper = papersData[index];
     const popupTitle = document.getElementById('popupTitle');
     const popupContent = document.getElementById('popupContent');
-    let first_author = author.split(",")
-    let first_surname = first_author[0].split(" ")
+    const firstAuthor = paper.author.split(',')[0].trim().split(' ');
+    const key = `${firstAuthor[firstAuthor.length - 1]}_${paper.year}`;
+    const entryType = paper.type || 'article';
+    const venueField = entryType === 'incollection' ? 'booktitle' : 'journal';
+
+    const fields = [
+        ['title', paper.title],
+        ['author', paper.author.split(', ').join(' and ')],
+        [venueField, paper.journal || paper.booktitle],
+        ['year', paper.year],
+        ['volume', paper.volume],
+        ['number', paper.number],
+        ['pages', paper.pages],
+        ['publisher', paper.publisher],
+        ['url', paper.link],
+    ].filter(([, value]) => value);
 
     if (popupTitle && popupContent) {
-        popupTitle.textContent = 'BibTeX Citation: ' + title;
-
-        // Construct the formatted BibTeX citation including volume and number if available
-        const bibtexContent = `
-@article{${first_surname[first_surname.length-1]}_${year},
-    title = {${title}},
-    author = {${author}},
-    journal = {${journal}},
-    year = {${year}},
-    ${volume ? `volume = {${volume}}` : ''}
-    ${number ? `number = {${number}},` : ''}
-    ${pages ? `pages = {${pages}},` : ''}
-}`;
-
-        // Apply left alignment to the popup content
+        popupTitle.textContent = 'BibTeX Citation: ' + paper.title;
         popupContent.style.textAlign = 'left';
-        popupContent.textContent = bibtexContent;
+        popupContent.textContent =
+            `@${entryType}{${key},\n` +
+            fields.map(([name, value]) => `    ${name} = {${value}}`).join(',\n') +
+            '\n}';
     }
 
     const citePopup = document.getElementById('citePopup');

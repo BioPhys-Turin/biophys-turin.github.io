@@ -12,10 +12,12 @@ The live version of this research site is hosted on GitHub Pages and can be acce
 
 ## How to edit
 
-- Add a member: add its profile to `files/researchers.json` and its image to `images/profiles/`
-- Moving a member to inactive: move its profiel from `files/researchers.json` to `files/researchers-former.json`
-- Adding a news: add a field to `files/news.json`
+- Add a member: add their profile to `files/researchers.json` and their photo to `images/profiles/` (square JPEG, about 400×400 px, well under 100 KB)
+- Move a member to former members: move their profile from `files/researchers.json` to `files/researchers-former.json`
+- Add a paper: add an entry to `papers/paper.json`
+- Add a news item: add an entry to `files/news.json`
+- The collaboration network on the About page (`network/network.html`) is rebuilt automatically by a GitHub Action whenever the researchers or papers files change. To rebuild it locally: `pip install -r network/requirements.txt && python network/network.py`
 - For everything else ask either Federico or Filippo
 
 ## License
-© 2025. This work is openly licensed via [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+© 2024–2026 BioPhys Turin. This work is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
