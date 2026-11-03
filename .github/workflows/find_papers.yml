@@ -1,0 +1,53 @@
+name: Find new papers
+
+# Every Monday, look on OpenAlex for new papers by current members and open a
+# pull request adding them to _data/papers.json. See tools/find_papers.py.
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency: find-papers
+
+jobs:
+  find-papers:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BRANCH: paper-finder
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Don't overwrite a review in progress: wait until the open one is merged or closed
+      - name: Check for an open review
+        id: open
+        run: echo "count=$(gh pr list --head "$BRANCH" --state open --json number --jq length)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        if: steps.open.outputs.count == '0'
+        with:
+          python-version: '3.12'
+
+      - name: Find papers
+        if: steps.open.outputs.count == '0'
+        run: python tools/find_papers.py --body "$RUNNER_TEMP/pr-body.md"
+
+      - name: Open pull request
+        if: steps.open.outputs.count == '0'
+        run: |
+          if git diff --quiet; then
+            echo "No new papers"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$BRANCH"
+          git add _data/papers.json tools/papers_seen.json
+          git commit -m "Propose new papers from OpenAlex"
+          git push --force origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" --title "New papers to review" --body-file "$RUNNER_TEMP/pr-body.md"

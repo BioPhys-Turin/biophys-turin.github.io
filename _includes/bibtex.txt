@@ -2,7 +2,7 @@
 {%- assign p = include.paper -%}
 {%- assign surname = p.author | split: "," | first | strip | split: " " | last -%}
 {%- assign type = p.type | default: "article" -%}
-{%- if type == "incollection" -%}{%- assign venue_field = "booktitle" -%}{%- else -%}{%- assign venue_field = "journal" -%}{%- endif -%}
+{%- if type == "incollection" or type == "inproceedings" -%}{%- assign venue_field = "booktitle" -%}{%- else -%}{%- assign venue_field = "journal" -%}{%- endif -%}
 @{{ type }}{ {{- surname }}_{{ p.year }},
     title = { {{- p.title -}} },
     author = { {{- p.author | split: "," | join: " and " | replace: "  ", " " -}} },

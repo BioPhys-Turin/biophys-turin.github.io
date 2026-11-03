@@ -18,7 +18,8 @@
             "mail": "letizia.pizzini@unito.it",
             "github": "https://github.com/letiziapizzini",
             "linkedin": "https://linkedin.com/in//letizia-pizzini-ba9a061b6",
-            "twitter": "https://twitter.com/lpizziniBioPhys"
+            "twitter": "https://twitter.com/lpizziniBioPhys",
+            "orcid": "https://orcid.org/0009-0000-2706-271X"
         }
     },
     {
@@ -27,7 +28,8 @@
         "image": "images/profiles/biondo.jpg",
         "socials": {
             "mail": "marta.biondo@unito.it",
-            "linkedin": "https://www.linkedin.com/in/marta-biondo"
+            "linkedin": "https://www.linkedin.com/in/marta-biondo",
+            "orcid": "https://orcid.org/0000-0002-2599-5572"
         }
     },
     {
@@ -36,7 +38,8 @@
         "image": "images/profiles/Lazzardi.jpg",
         "socials": {
             "mail": "Silvia.Lazzardi@unito.it",
-            "linkedin": "https://www.linkedin.com/in/silvia-lazzardi-0870b315a/"
+            "linkedin": "https://www.linkedin.com/in/silvia-lazzardi-0870b315a/",
+            "orcid": "https://orcid.org/0000-0001-8058-0065"
         }
     },
     {
@@ -54,7 +57,8 @@
         "image": "images/profiles/mottes.jpg",
         "socials": {
             "mail": "francesco.mottes@unito.it",
-            "linkedin": "https://www.linkedin.com/in/francesco-mottes"
+            "linkedin": "https://www.linkedin.com/in/francesco-mottes",
+            "orcid": "https://orcid.org/0000-0002-8858-2484"
         }
     },
     {
@@ -63,7 +67,8 @@
         "image": "images/profiles/eandreot.jpg",
         "socials": {
             "mail": "eleonora.andreotti@unito.it",
-            "linkedin": "https://www.linkedin.com/in/eleonora-andreotti-5b3898168"
+            "linkedin": "https://www.linkedin.com/in/eleonora-andreotti-5b3898168",
+            "orcid": "https://orcid.org/0000-0002-4500-2435"
         }
     },
     {
@@ -72,7 +77,8 @@
         "image": "images/profiles/furlan.jpeg",
         "socials": {
             "mail": "mattia.furlan@unito.it",
-            "linkedin": "https://www.linkedin.com/in/mattia-furlan-277527171/"
+            "linkedin": "https://www.linkedin.com/in/mattia-furlan-277527171/",
+            "orcid": "https://orcid.org/0000-0002-5460-6660"
         }
     },
     {
@@ -80,7 +86,8 @@
         "title": "PhD",
         "image": "images/profiles/reale2.jpg",
         "socials": {
-            "mail": "elisa.reale@unito.it"
+            "mail": "elisa.reale@unito.it",
+            "orcid": "https://orcid.org/0009-0005-1409-0136"
         }
     },
     {
@@ -97,7 +104,8 @@
         "title": "PhD",
         "image": "images/profiles/fumagalli.jpg",
         "socials": {
-            "mail": "mariarita.fumagalli@unito.it"
+            "mail": "mariarita.fumagalli@unito.it",
+            "orcid": "https://orcid.org/0000-0003-3404-5779"
         }
     },
     {
