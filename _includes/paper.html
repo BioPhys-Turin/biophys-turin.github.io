@@ -1,0 +1,19 @@
+{%- comment -%}
+  One paper entry. Parameters: paper (an entry of _data/papers.json), cite (true to show the Cite button)
+{%- endcomment -%}
+{%- assign paper = include.paper -%}
+<div class="paper">
+    <img src="{{ '/images/icons/doc.svg' | relative_url }}" alt="">
+    <div class="paper-info">
+        <p><span class="author">{{ paper.author | escape }} ({{ paper.year }})</span></p>
+        <p><a href="{{ paper.link }}" target="_blank" rel="noopener" class="paper-title">{{ paper.title | escape }}</a></p>
+        <span class="journal">{{ paper.journal | default: paper.booktitle | escape }}{% if paper.volume %} {{ paper.volume }}{% endif %}{% if paper.number %}, {{ paper.number }}{% endif %}</span>
+        {%- if include.cite %}
+        <div class="cite-button">
+            <button type="button" data-cite>Cite</button>
+        </div>
+        {%- capture bibtex %}{% include bibtex.txt paper=paper %}{% endcapture %}
+        <pre class="bibtex" hidden>{{ bibtex | escape }}</pre>
+        {%- endif %}
+    </div>
+</div>
