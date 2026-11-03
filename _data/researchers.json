@@ -1,4 +1,4 @@
-[   
+[
     {
         "name": "Michele Caselle",
         "title": "Professor",
@@ -8,10 +8,10 @@
             "mail": "michele.caselle@unito.it",
             "github": "https://github.com/mcaselle",
             "linkedin": "https://www.linkedin.com/in/michele-caselle-17107613/",
-            "publications": "https://pubmed.ncbi.nlm.nih.gov/?term=caselle+michele"
-             }
+            "publications": "https://pubmed.ncbi.nlm.nih.gov/?term=caselle+michele",
+            "orcid": "https://orcid.org/0000-0001-5488-142X"
+        }
     },
-    
     {
         "name": "Matteo Osella",
         "title": "Associate Professor",
@@ -21,10 +21,10 @@
             "mail": "matteo.osella@unito.it",
             "github": "https://github.com/matteo-osella",
             "linkedin": "https://www.linkedin.com/in/matteo-osella-54413058/",
-            "publications": "https://pubmed.ncbi.nlm.nih.gov/?term=matteo+osella"
+            "publications": "https://pubmed.ncbi.nlm.nih.gov/?term=matteo+osella",
+            "orcid": "https://orcid.org/0000-0002-4916-5434"
         }
     },
-
     {
         "name": "Filippo Valle",
         "title": "Postdoc",
@@ -32,10 +32,11 @@
         "image": "images/profiles/valle.jpg",
         "socials": {
             "mail": "filippo.valle@unito.it",
-            "github":"https://github.com/fvalle1",
+            "github": "https://github.com/fvalle1",
             "linkedin": "https://www.linkedin.com/in/filippo-valle/",
             "publications": "https://orcid.org/0000-0003-3577-8667",
-            "personal-page": "https://fvalle.online"
+            "personal-page": "https://fvalle.online",
+            "orcid": "https://orcid.org/0000-0003-3577-8667"
         }
     },
     {
@@ -47,10 +48,10 @@
             "mail": "federico.milanesio@unito.it",
             "github": "https://github.com/FedericoMilanesio",
             "linkedin": "https://linkedin.com/in/federico-milanesio",
-            "twitter": "https://twitter.com/FedeMilanesio"
+            "twitter": "https://twitter.com/FedeMilanesio",
+            "orcid": "https://orcid.org/0009-0002-2691-0689"
         }
     },
-
     {
         "name": "Leonardo Agasso",
         "title": "PhD Student",
@@ -60,7 +61,8 @@
             "mail": "leonardo.agasso@unito.it",
             "github": "https://github.com/LeonardoAgasso",
             "linkedin": "https://www.linkedin.com/in/leonardo-agasso-22ba561bb/",
-            "twitter": "https://twitter.com/AgassoLeonardo"
+            "twitter": "https://twitter.com/AgassoLeonardo",
+            "orcid": "https://orcid.org/0009-0003-8069-7185"
         }
     },
     {
@@ -71,7 +73,8 @@
         "socials": {
             "mail": "niccolo.cirone@unito.it",
             "github": "https://github.com/niccociro",
-            "linkedin": "https://www.linkedin.com/in/niccol%C3%B2-cirone-22548a168/"
+            "linkedin": "https://www.linkedin.com/in/niccol%C3%B2-cirone-22548a168/",
+            "orcid": "https://orcid.org/0009-0003-5957-6610"
         }
     },
     {
@@ -90,7 +93,8 @@
         "description": "Discoverer of the Mazzolini's theorem",
         "socials": {
             "mail": "andrea.mazzolini@studenti.unito.it",
-            "linkedin": "https://www.linkedin.com/in/andrea-mazzolini-bb71a189/"
+            "linkedin": "https://www.linkedin.com/in/andrea-mazzolini-bb71a189/",
+            "orcid": "https://orcid.org/0000-0003-3194-2052"
         }
     }
 ]

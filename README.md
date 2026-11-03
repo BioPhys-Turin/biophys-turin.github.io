@@ -14,7 +14,7 @@ The live version of this research site is hosted on GitHub Pages and can be acce
 
 Members and papers live in plain JSON files under `_data/`. Commit a change to `main` and GitHub Pages rebuilds the site within a minute or two.
 
-- **Add a member:** add their profile to `_data/researchers.json` and their photo to `images/profiles/` (square JPEG, about 400×400 px, well under 100 KB). Each key under `socials` needs a matching icon in `images/icons/<key>.svg`.
+- **Add a member:** add their profile to `_data/researchers.json` and their photo to `images/profiles/` (square JPEG, about 400×400 px, well under 100 KB). Each key under `socials` needs a matching icon in `images/icons/<key>.svg`. Add their ORCID as `"orcid": "https://orcid.org/0000-…"` under `socials` if they have one.
 - **Move a member to former members:** move their profile from `_data/researchers.json` to `_data/researchers_former.json`.
 - **Add a paper:** add an entry to `_data/papers.json`. Papers are listed newest year first; within a year they keep the order of the file, so put new papers at the top. The five most recent also appear on the home page. Separate authors with `", "`. The BibTeX shown by the Cite button is generated from the entry's fields.
 - **News:** the News page embeds an Elfsight widget; its content is managed from the Elfsight dashboard, not from this repository.
