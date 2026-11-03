@@ -1,0 +1,26 @@
+{%- comment -%} BibTeX entry for one paper from _data/papers.json {%- endcomment -%}
+{%- assign p = include.paper -%}
+{%- assign surname = p.author | split: "," | first | strip | split: " " | last -%}
+{%- assign type = p.type | default: "article" -%}
+{%- if type == "incollection" -%}{%- assign venue_field = "booktitle" -%}{%- else -%}{%- assign venue_field = "journal" -%}{%- endif -%}
+@{{ type }}{ {{- surname }}_{{ p.year }},
+    title = { {{- p.title -}} },
+    author = { {{- p.author | split: "," | join: " and " | replace: "  ", " " -}} },
+    {{ venue_field }} = { {{- p.journal | default: p.booktitle -}} },
+    year = { {{- p.year -}} }
+{%- if p.volume %},
+    volume = { {{- p.volume -}} }
+{%- endif %}
+{%- if p.number %},
+    number = { {{- p.number -}} }
+{%- endif %}
+{%- if p.pages %},
+    pages = { {{- p.pages -}} }
+{%- endif %}
+{%- if p.publisher %},
+    publisher = { {{- p.publisher -}} }
+{%- endif %}
+{%- if p.link %},
+    url = { {{- p.link -}} }
+{%- endif %}
+}

@@ -1,84 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    
-    <script type="application/ld+json">
-    {
-      "@context" : "https://schema.org",
-      "@type" : "WebSite",
-      "name" : "INFN Biophys Turin",
-      "url" : "https://biophys-turin.github.io/"
-    }
-    </script>
-    <meta name="description" content="Homepage of the INFN Biophys group at UniTO">
-    <meta name="keywords" content="Biophys, Unito, Torino, Turin, Complex Systems, Physics, Neural Networks">
-    <meta name="author" content="Federico Milanesio">
-    <link rel="canonical" href="https://biophys-turin.github.io/">
-
-    <meta property="og:title" content="Homepage - Biophys Turin">
-    <meta property="og:description" content="Homepage of the INFN Biophys group at UniTO">
-    <meta property="og:url" content="https://biophys-turin.github.io/">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_IT">
-    <meta property="og:site_name" content="INFN Biophys Group">
-
-    <meta name="twitter:title" content="Homepage - Biophys Turin">
-    <meta name="twitter:description" content="Homepage of the INFN Biophys group at UniTO">
-
-    <meta name="robots" content="index,follow">
-    <meta name="revisit-after" content="14 days">
-
-    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-    <meta http-equiv="Content-Security-Policy" content="
-                default-src 'self'; 
-                script-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com;
-                style-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com https://code.ionicframework.com https://maxcdn.bootstrapcdn.com;
-                img-src 'self' data: https://tile.openstreetmap.org;
-                font-src 'self' https://code.ionicframework.com;
-        ">
-    
-
-    <link rel="preload" href="/scripts/loading.js" as="script">
-    <link rel="preload" href="/scripts/nav.js" as="script">
-    <link rel="preload" href="/scripts/nav-click.js" as="script">
-    <link rel="preload" href="/scripts/footer.js" as="script">
-    <link rel="preload" href="/scripts/url-manip.js" as="script">
-    <link rel="preload" href="styles.css" as="style" />
-
-    <link rel="preload" fetchpriority="high" href="/images/protein.jpeg" as="image" type="image/jpg">
-    
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
-    <header>
-        <div id="nav-container"></div>
-        <script src="scripts/nav.js"></script>
-        <script src="scripts/nav-click.js"></script>
-    </header>
-
-    <div class="loading">
-        <img src="images/loading.gif" alt="Loading..." />
+---
+permalink: /
+description: Homepage of the INFN Biophys group at UniTO
+preload_image: /images/protein.jpeg
+---
+<div class="hero">
+    <div class="hero-content">
+        <h1>The official page of the INFN Biophys group at UniTO</h1>
+        <p>Explore our research in Systems Biology and Neural Networks</p>
     </div>
-    <script src="scripts/loading.js"></script>
-
-    <div class="content">
-        <div class="hero">
-            <div class="hero-content">
-                <h1>The official page of the INFN Biophys group at UniTO</h1>
-                <p>Explore our research in Systems Biology and Neural Networks</p>
-            </div>
-        </div>  
-
-        <div id="footer-container"></div>
-    </div>
-    <script src="scripts/footer.js" defer></script>
-     <!-- JavaScript snippet to remove .html extension -->
-    <script src="scripts/url-manip.js"> </script>
-
-</body>
-</html>
+</div>

@@ -1,54 +1,189 @@
-#lightbox img,
-header {
-    background-color: #fff;
-}
-body,
-nav ul {
-    padding: 0;
+/* ==========================================================================
+   Base
+   ========================================================================== */
+body {
     margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
 }
-.author,
-.hero h1,
-.hero p {
-    font-weight: 700;
-}
-#lightbox,
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-.hero,
-.lightbox-content,
-.popup-content,
-footer,
 h1 {
     text-align: center;
 }
-body,
-footer {
-    background-color: #f9f9f9;
+
+/* ==========================================================================
+   Header / navigation
+   ========================================================================== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
 }
-.error-page a,
-.mission-item a,
-.paper-title,
+nav {
+    text-align: right;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
 nav ul li a {
+    color: #333;
     text-decoration: none;
 }
-body {
-    font-family: Roboto, Arial, sans-serif;
-    color: #333;
+.identity-logo img {
+    display: flex;
+    width: auto;
+    height: 80px;
 }
-.container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 20px 0;
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.navbar-toggle span {
+    height: 2px;
+    width: 25px;
+    margin-bottom: 4px;
+    background-color: #000;
+}
+
+/* ==========================================================================
+   Home: hero
+   ========================================================================== */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 80vh;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    background-image: url(images/protein.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: 3.5em;
+    font-weight: 700;
+}
+.hero p {
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   About
+   ========================================================================== */
+.mission {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
+.mission-item {
+    flex: 1;
+    padding: 0 1rem;
+}
+.mission-item h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+}
+.mission-item p {
+    font-size: 1.1rem;
+    color: #666;
+}
+.mission-item a,
+.mission-item a:visited {
+    color: #000;
+    text-decoration: none;
+}
+.mission-item a:hover {
+    text-decoration: underline;
+}
+.mission-image {
+    display: inline-block;
+    flex: 1;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+.mission-image img {
+    display: block;
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.mission-network {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+#map {
+    width: 50%;
+    height: 360px;
+    margin: 0 auto;
+}
+
+/* Lightbox (About page images) */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 0.7);
+}
+.lightbox-content {
+    text-align: center;
+}
+#lightbox img {
+    display: block;
+    max-width: 60%;
+    max-height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.image-description {
+    display: block;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+    background-color: rgb(255 255 255 / 0.9);
+}
+
+/* ==========================================================================
+   Researchers
+   ========================================================================== */
 #researchersList,
 #researchersListFormer {
     margin-top: 2rem;
@@ -56,146 +191,226 @@ body {
     margin-right: 20rem;
     padding: 1rem;
 }
-#mission,
-.mission-network {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-#mission {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    align-items: center;
-}
-.mission-item {
-    flex: 1;
-    padding: 0 1rem;
-}
-.mission-item h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1rem;
-}
-.mission-item p {
-    font-size: 1.1rem;
-    color: #666;
-}
-.mission-image {
-    flex: 1;
-    padding: 0 1rem;
-    display: inline-block;
-    cursor: pointer;
-}
-.mission-image img {
-    width: 90%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.mission-network {
-    display: flex;
-    width: 70%;
-    padding: 2rem;
-    align-items: center;
-}
-#lightbox img,
-.image-description {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 60%;
-}
-.researcher,
-.researcher_former {
-    margin-bottom: 30px;
-}
-#lightbox {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255 255 255 / 0.7);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-#lightbox img {
-    max-height: 70%;
-    border-radius: 5px;
-}
-.image-description {
-    background-color: rgb(255 255 255 / 0.9);
-    font-size: 1.1em;
-}
-.identity-logo img {
-    width: auto;
-    height: 80px;
-    display: flex;
-}
-.mission-item a,
-.mission-item a:visited,
-footer a,
-footer a:visited {
-    color: #000;
-}
-header,
-nav ul li a {
-    color: #333;
-}
-.mission-item a:hover,
-footer a:hover {
-    text-decoration: underline;
-}
-.hero,
-.paper,
 .researcher {
     display: flex;
+    margin-bottom: 30px;
 }
-.profile-details h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-.profile-details p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 1rem;
+.former-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .researcher_former {
-    width: 48%;
     box-sizing: border-box;
-}
-.researcher_former img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 48%;
+    margin-bottom: 30px;
 }
 .profile-img {
     float: left;
     margin-right: 10px;
 }
+.researcher .profile-img img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.researcher_former .profile-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 .profile-details {
     overflow: hidden;
+}
+.profile-details h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+.profile-details p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #666;
 }
 .researcher .title {
     font-style: italic;
     color: #666;
 }
-.researcher img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-right: 20px;
-    object-fit: cover;
-}
 .researcher hr {
     width: 800px;
-    text-align: left;
     margin-left: 0;
+    text-align: left;
 }
 p.description {
     max-width: 800px;
 }
+.social-links {
+    margin-top: 1rem;
+}
+.social-links img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 0;
+    transition: transform 0.3s;
+}
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* ==========================================================================
+   Papers
+   ========================================================================== */
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.paper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.paper img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+.paper-info {
+    flex: 1;
+}
+.paper-title {
+    color: #007bff;
+    text-decoration: none;
+}
+.author {
+    font-weight: 700;
+}
+.journal {
+    font-style: italic;
+}
+.cite-button {
+    margin-top: 10px;
+}
+
+/* BibTeX popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgb(0 0 0 / 0.5);
+}
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+}
+.popup-content h2 {
+    margin-bottom: 10px;
+}
+.popup-content pre {
+    text-align: left;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================================================
+   News
+   ========================================================================== */
+.news-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.news-container iframe {
+    width: 90vw;
+    height: 120vh;
+    border: none;
+}
+.summary {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ==========================================================================
+   404
+   ========================================================================== */
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.error-page h1 {
+    margin: 0;
+    font-size: 48px;
+}
+.error-page p {
+    margin: 0;
+    font-size: 24px;
+}
+.error-page a {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+footer a,
+footer a:visited {
+    color: #000;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.logo-container {
+    margin-left: 20px;
+}
+.logo-container a {
+    margin-right: 20px;
+}
+.logo {
+    width: auto;
+    height: 60px;
+}
+
+/* ==========================================================================
+   Tablet (≤ 1100px)
+   ========================================================================== */
 @media (max-width: 1100px) {
     .container {
         flex-direction: column;
@@ -208,235 +423,107 @@ p.description {
     }
     .mission-image,
     .mission-item {
-        padding: 0;
         margin-bottom: 0;
+        padding: 0;
     }
-    .researcher-pair {
+    .former-list {
         flex-direction: column;
     }
     .researcher {
         flex-direction: column;
         margin-left: 15%;
         margin-right: 15%;
-        align-items: left;
     }
     .researcher .profile-img {
         display: flex;
         justify-content: center;
-        max-width: calc(100%);
+        max-width: 100%;
         margin-bottom: 10px;
     }
-    .researcher .profile-img img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
     .researcher_former {
-        width: 100%;
         display: flex;
-        align-items: center;
-        margin-bottom: 20px;
         flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
     }
-    .researcher_former img {
+    .researcher_former .profile-img img {
+        flex-shrink: 0;
         width: 90px;
         height: 90px;
-        border-radius: 50%;
         margin-right: 20px;
-        flex-shrink: 0;
-        object-fit: cover;
     }
     .researcher hr {
         width: 100%;
     }
-    .researcher_info {
-        flex: 1;
-        max-width: 80%;
-    }
     .profile-details h2 {
         font-size: 1.2rem;
-        color: #333;
-        margin-bottom: 0.5rem;
     }
     .profile-details p {
         font-size: 1rem;
-        color: #666;
-        margin-bottom: 1rem;
+    }
+    .news-container iframe {
+        height: 115vh;
     }
 }
-header {
-    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-nav ul {
-    list-style: none;
-}
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-nav ul li:last-child {
-    margin-right: 60;
-}
-nav {
-    text-align: right;
-}
-.news-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-.tweet-container {
-    border-top: 1px solid #e0e0e0;
-    padding: 1.5rem 1rem;
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: 400px;
-    margin-bottom: 2rem;
-}
-.hero h1,
-.paper,
-.researcher-pair {
-    margin-bottom: 20px;
-}
-.summary {
-    color: #555;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-.hero {
-    height: 80vh;
-    background-image: url(images/protein.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.hero-content {
-    max-width: 800px;
-    padding: 20px;
-}
-.hero h1 {
-    font-size: 3.5em;
-}
-.hero p {
-    font-size: 2em;
-    margin-bottom: 40px;
-}
-.cite-button,
-.links {
-    margin-top: 10px;
-}
-.social-links {
-    margin-top: 1rem;
-}
-.social-links img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    border-radius: 0;
-    transition: transform 0.3s;
-}
-.logo-container a,
-.paper img {
-    margin-right: 20px;
-}
-.social-links img:hover {
-    transform: scale(1.2);
-}
-.paper {
-    align-items: center;
-    font-size: 1.2rem;
-}
-.paper img {
-    width: 40px;
-    height: 40px;
-}
-.paper-info {
-    flex: 1;
-}
-.paper-title {
-    color: #007bff;
-}
-.journal {
-    font-style: italic;
-}
-.popup {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0 0 0 / 0.5);
-    z-index: 1000;
-    overflow-y: auto;
-}
-.popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-}
-.popup-content h2 {
-    margin-bottom: 10px;
-}
-.researcher-pair {
-    display: flex;
-    justify-content: space-between;
-}
-.logo-container {
-    margin-left: 20px;
-}
-.logo {
-    height: 60px;
-    width: auto;
-}
-footer {
-    position: relative;
-    font-size: 0.8rem;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 220px;
-}
-.navbar-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-.navbar-toggle span {
-    height: 2px;
-    width: 25px;
-    background-color: #000;
-    margin-bottom: 4px;
-}
+
+/* ==========================================================================
+   Mobile (≤ 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
-    .date,
-    nav ul,
-    nav ul li {
-        margin-right: 0;
-    }
-    .date,
-    .logo-container,
-    .navbar-links,
-    .news-item h2,
-    h1,
-    nav ul {
-        text-align: center;
+    h1 {
+        margin-top: 20px;
+        font-size: 1.3em;
     }
     .hide-on-mobile {
         display: none !important;
     }
-    #mission {
+
+    /* Navigation */
+    nav ul {
+        margin-right: 0;
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .identity-logo img {
+        justify-content: center;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    }
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    .navbar-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1.5em;
+    }
+
+    /* About */
+    .mission {
         flex-direction: column;
         align-items: center;
         margin: 5%;
@@ -449,43 +536,17 @@ footer {
     .mission-image {
         order: 2;
     }
+    #map {
+        width: 90%;
+    }
     #lightbox img {
         max-width: 90%;
         max-height: 70%;
     }
-    .identity-logo img {
-        height: 50px;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 2rem;
-    }
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-    h1 {
-        font-size: 1.3em;
-        margin-top: 20px;
-    }
-    .date,
-    .paper,
-    .summary {
+
+    /* Papers */
+    .paper {
         font-size: 1rem;
-    }
-    .news-container {
-        flex-direction: column;
-        align-items: center;
-        border-left: none;
-        border-right: none;
-        padding: 1rem;
-    }
-    
-    .hero h1 {
-        font-size: 2em;
-    }
-    .hero p {
-        font-size: 1.5em;
     }
     .popup-content {
         width: 90%;
@@ -495,83 +556,39 @@ footer {
     .popup-content h2 {
         font-size: 1.2em;
     }
+
+    /* News */
+    .news-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        border-left: none;
+        border-right: none;
+    }
+    .news-item h2,
+    .date {
+        margin-right: 0;
+        text-align: center;
+    }
+    .date,
+    .summary {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.7rem;
+    }
     .logo-container {
         margin-left: 3px;
         margin-right: 3px;
+        text-align: center;
     }
     .logo-container a {
         margin-right: 10px;
     }
     .logo {
-        height: 30px;
         width: auto;
-    }
-    footer {
-        font-size: 0.7rem;
-    }
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        transition: 0.3s;
-    }
-    .navbar-links.active {
-        display: flex;
-    }
-    .navbar-toggle {
-        display: flex;
-        margin-bottom: 8px;
-        justify-content: center;
-        align-items: center;
-    }
-}
-.loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255 255 255 / 0.8);
-    z-index: 9999;
-}
-.loading img {
-    width: 60px;
-    height: auto;
-}
-.content {
-    display: none;
-}
-.error-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-}
-.error-page h1 {
-    font-size: 48px;
-    margin: 0;
-}
-.error-page p {
-    font-size: 24px;
-    margin: 0;
-}
-.error-page a {
-    color: #3498db;
-    font-size: 18px;
-    margin-top: 20px;
-}
-.news-container iframe {
-    border: none;
-    height: 120vh;
-    width: 90vw;
-}
-@media (max-width: 1100px) {
-    .news-container iframe {
-        height: 115vh;
+        height: 30px;
     }
 }

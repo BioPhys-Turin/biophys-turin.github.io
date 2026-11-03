@@ -1,129 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <meta name="description" content="About the INFN Biophys group at UniTO">
-    <meta name="keywords" content="Biophys, Unito, Torino, Turin, Complex Systems, Physics, Neural Networks">
-    <meta name="author" content="Federico Milanesio">
-    <meta property="og:locale" content="en_IT">
-    <meta property="og:site_name" content="INFN Biophys Group">
-    <meta property="og:title" content="About - Biophys Turin">
-    <meta property="og:description" content="About from the INFN Biophys group at UniTO">
-    <meta property="og:url" content="https://biophys-turin.github.io/about">
-    <meta property="og:type" content="website">
-
-    <meta name="twitter:title" content="About - Biophys Turin">
-    <meta name="twitter:description" content="About from the INFN Biophys group at UniTO">
-    <meta name="robots" content="index,follow">
-
-    <link rel="preload" href="/scripts/loading.js" as="script">
-    <link rel="preload" href="/scripts/nav.js" as="script">
-    <link rel="preload" href="/scripts/nav-click.js" as="script">
-    <link rel="preload" href="/scripts/footer.js" as="script">
-    <link rel="preload" href="/scripts/images.js" as="script">
-    <link rel="preload" href="/scripts/url-manip.js" as="script">
-    <link rel="preload" href="/scripts/map.js" as="script">
-    <link rel="preload" href="styles.css" as="style" />
-
-    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-    <meta http-equiv="Content-Security-Policy" content="
-                default-src 'self'; 
-                script-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com;
-                style-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com https://code.ionicframework.com https://maxcdn.bootstrapcdn.com;
-                img-src 'self' data: https://tile.openstreetmap.org;
-                font-src 'self' https://code.ionicframework.com;
-        ">
-    
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
-    <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
-    <script src="scripts/leaflet.awesome-markers.js"></script>
-</head>
-<body>
-    <header>
-        <div id="nav-container"></div>
-        <script src="scripts/nav.js"></script>
-        <script src="scripts/nav-click.js"></script>
-    </header>
-
-    <div class="loading">
-        <img src="images/loading.gif" alt="Loading..." />
-    </div>
-    <script src="scripts/loading.js"></script>
-    <div class="content">
-        <section id="mission">
-            <div class="mission-image">
-                <p><img src="/images/talk.jpg" width="895" height="1072" data-full-src="/images/talk.jpg" data-description="Matteo Osella speaking at VIII edition of the Italian Conference of Physics Students - CISF24 " alt="Talk osella"></img></p>
-            </div>
-            
-
-
-            <div class="mission-item">
-                <p><h2>Who we are</h2>
-                <p>We are a research group at the University of Turin with two main interests: computational biology and theory of neural networks (and sometimes these two topics overlap!)
-                </p>    
-                <p><b>Computational Biology</b></p>
-                <p>
-                    We apply methods from physics and mathematics to the study of many different topics in biology, including gene differentiation
-                    and reprogramming, whole genome duplication, and sequencing. 
-                    By integrating bioinformatics, statistical modeling, and machine learning, we aim to understand the complex networks 
-                    governing these different phenomena. Additionally, one of our main interests is the study of the scale laws that govern biological systems,
-                    trying to find the universal principles underlying biological organization. Another research topic that we pursued is the intrinsic dimensions of 
-                    biological datasets, using dimensionality reduction and manifold learning methods to find meaningful trends from 
-                    complex biological data.
-                </p>
-                <p>
-                    <b>Neural Networks</b>
-                </p>
-                <p>
-                    Our neural networks section is dedicated to the theoretical explorations of modern machine learning architectures. 
-                    We believe that it is crucial to focus our efforts on the theoretical aspects of neural networks, given that their development relies 
-                    not on a deep understanding but on trial and error. 
-                    We use tools from physics, such as statistical mechanics and dynamical systems theory, and apply them to
-                    these systems to (hopefully) better understand their underlying principles.
-                </p>
-            
-            </div>
-            
-        </section>
-
-        <section id="mission" class="hide-on-mobile">
-            <div class="mission-item">
-                <h2>Collaborations</h2>
-                <p>Explore our network of collaborations. Click on a node to learn more about our papers, our researchers and our collaborators. 
-                </p>
-            </div>
-        <div class="mission-network">
-            <iframe width="100%" height="500px" src="network/network.html"  title="Explorable network of collaborations"></iframe>
-        </div>
-        </section>
-        
-        <section id="mission" class="hide-on-mobile"> 
-            <div class="mission-item">
-                <h2>Where to find us</h2>
-                <p>We are always happy to welcome visitors and discuss our research.</p>
-                <p>Come to see us at the Department of Physics, University of Turin. Our main office is located on the second floor of the old building, in Via Pietro Giuria 1, 12125 Torino, Italy. 
-                </p>
-            </div>
-        </section>
-    </div>
-    <div id="map" style="height:360px;width:50%; margin: 0 auto;"></div>
+---
+title: About
+permalink: /about
+description: About the INFN Biophys group at UniTO
+map: true
+scripts:
+  - /scripts/images.js
+  - /scripts/map.js
+---
+<section class="mission">
+    <div class="mission-image">
+        <p><img src="{{ '/images/talk.jpg' | relative_url }}" width="895" height="1072" data-full-src="{{ '/images/talk.jpg' | relative_url }}" data-description="Matteo Osella speaking at VIII edition of the Italian Conference of Physics Students - CISF24" alt="Matteo Osella giving a talk at CISF24"></p>
     </div>
 
-    <div id="footer-container" class="content"></div>
-    <script src="scripts/images.js"></script>
-    <script src="scripts/footer.js" defer></script>
-    <!-- JavaScript snippet to remove .html extension -->
-    <script src="scripts/url-manip.js"> </script>
-    <script src="scripts/map.js"></script>
-</body>
-</html>
+    <div class="mission-item">
+        <h2>Who we are</h2>
+        <p>We are a research group at the University of Turin with two main interests: computational biology and theory of neural networks (and sometimes these two topics overlap!)
+        </p>
+        <p><b>Computational Biology</b></p>
+        <p>
+            We apply methods from physics and mathematics to the study of many different topics in biology, including gene differentiation
+            and reprogramming, whole genome duplication, and sequencing.
+            By integrating bioinformatics, statistical modeling, and machine learning, we aim to understand the complex networks
+            governing these different phenomena. Additionally, one of our main interests is the study of the scale laws that govern biological systems,
+            trying to find the universal principles underlying biological organization. Another research topic that we pursued is the intrinsic dimensions of
+            biological datasets, using dimensionality reduction and manifold learning methods to find meaningful trends from
+            complex biological data.
+        </p>
+        <p>
+            <b>Neural Networks</b>
+        </p>
+        <p>
+            Our neural networks section is dedicated to the theoretical explorations of modern machine learning architectures.
+            We believe that it is crucial to focus our efforts on the theoretical aspects of neural networks, given that their development relies
+            not on a deep understanding but on trial and error.
+            We use tools from physics, such as statistical mechanics and dynamical systems theory, and apply them to
+            these systems to (hopefully) better understand their underlying principles.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="mission hide-on-mobile">
+    <div class="mission-item">
+        <h2>Collaborations</h2>
+        <p>Explore our network of collaborations. Click on a node to learn more about our papers, our researchers and our collaborators.
+        </p>
+    </div>
+    <div class="mission-network">
+        <iframe width="100%" height="500" src="{{ '/network/network.html' | relative_url }}" title="Explorable network of collaborations"></iframe>
+    </div>
+</section>
+
+<section class="mission hide-on-mobile">
+    <div class="mission-item">
+        <h2>Where to find us</h2>
+        <p>We are always happy to welcome visitors and discuss our research.</p>
+        <p>Come to see us at the Department of Physics, University of Turin. Our main office is located on the second floor of the old building, in Via Pietro Giuria 1, 12125 Torino, Italy.
+        </p>
+    </div>
+</section>
+
+<div id="map"></div>

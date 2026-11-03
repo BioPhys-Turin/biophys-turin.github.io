@@ -1,64 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
-    <meta name="description" content="News from the INFN Biophys group at UniTO">
-    <meta name="keywords" content="Biophys, Unito, Torino, Turin, Complex Systems, Physics, Neural Networks">
-    <meta name="author" content="Federico Milanesio">
-
-    <meta property="og:title" content="News - Biophys Turin">
-    <meta property="og:description" content="News from the INFN Biophys group at UniTO">
-    <meta property="og:url" content="https://biophys-turin.github.io/newsl">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_IT">
-    <meta property="og:site_name" content="INFN Biophys Group">
-
-    <meta name="twitter:title" content="News - Biophys Turin">
-    <meta name="twitter:description" content="News from the INFN Biophys group at UniTO">
-
-    <meta name="robots" content="index,follow">
-
-    <link rel="preload" href="/scripts/loading.js" as="script">
-    <link rel="preload" href="/scripts/nav.js" as="script">
-    <link rel="preload" href="/scripts/nav-click.js" as="script">
-    <link rel="preload" href="/scripts/footer.js" as="script">
-    <link rel="preload" href="/scripts/script-news.js" as="script">
-    <link rel="preload" href="/scripts/url-manip.js" as="script">
-    <link rel="preload" href="styles.css" as="style" />
-
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
-    <header>
-        <div id="nav-container"></div>
-        <script src="scripts/nav.js"></script>
-        <script src="scripts/nav-click.js"></script>
-    </header>
-
-    <div class="loading">
-        <img src="images/loading.gif" alt="Loading..." />
-    </div>
-    <div class="content">
-        <script src="scripts/loading.js"></script>
-
-        <div class="news-container" id="tweets">
-            <script src="https://static.elfsight.com/platform/platform.js" async></script>
-            <div class="elfsight-app-35162580-058c-4825-abc5-39063273489d" data-elfsight-app-lazy></div>
-        </div>
-        
-        <div id="footer-container"></div>
-    </div>
-
-    
-
-    <script src="scripts/footer.js"></script>
-    <!-- JavaScript snippet to remove .html extension -->
-    <script src="scripts/url-manip.js"> </script>
-    
-</body>
-
-</html>
+---
+title: News
+permalink: /news
+description: News from the INFN Biophys group at UniTO
+# The Elfsight widget loads from many third-party domains, so this page has no CSP
+csp: false
+---
+<div class="news-container" id="tweets">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-35162580-058c-4825-abc5-39063273489d" data-elfsight-app-lazy></div>
+</div>

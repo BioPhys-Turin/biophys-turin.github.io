@@ -16,22 +16,22 @@
     "author": "Andrea Mazzolini, Leonardo Agasso, Filippo Valle, Michele Caselle, Marco Cosentino Lagomarsino, Matteo Osella",
     "year": "2026",
     "month": "jul",
-    "journal": "bioRxiv",
+    "journal": "arXiv",
     "urldate": "2026-07-02"
   },
   {
-    "type": "misc",
+    "type": "article",
     "title": "Component systems: Do null models explain everything?",
     "link": "https://doi.org/10.1371/journal.pcsy.0000114",
     "author": "Andrea Mazzolini, Mattia Corigliano, Rossana Droghetti, Matteo Osella, Marco Cosentino Lagomarsino",
     "year": "2026",
     "month": "jun",
-    "journal": "bioRxiv",
+    "journal": "PLOS Complex Systems",
     "urldate": "2026-06-30"
   }, 
   {
-      "type":"misc",
-      "title":"The advantage of fine-grained training", 
+      "type":"article",
+      "title":"The advantage of fine-grained training",
       "link":"https://doi.org/10.1038/s41598-026-64362-6",
       "author":"Davide Pirovano, Federico Milanesio, Michele Caselle, Piero Fariselli, Matteo Osella",
       "year":"2026",
@@ -40,7 +40,7 @@
       "urldate":"2026-09-18"
     },
     {
-      "type": "misc",
+      "type": "article",
       "title": "Tessellation Groups, Harmonic Analysis on Non-compact Symmetric Spaces and the Heat Kernel in view of Cartan Convolutional Neural Networks",
       "link": "https://doi.org/10.1002/prop.70099",
       "urldate": "2025-08-22",
@@ -52,13 +52,15 @@
       "year": "2026"
     },
     {
-      "type": "misc",
+      "type": "article",
       "title": "Navigation through Non-Compact Symmetric Spaces: a mathematical perspective on Cartan Neural Networks",
       "link": "https://doi.org/10.1016/j.geomphys.2026.105804",
       "urldate": "2026-03-03",
       "journal": "Journal of Geometry and Physics",
       "author": "Federico Milanesio, Matteo Santoro, Pietro G. Fré, Guido Sanguinetti",
       "month": "mar",
+      "volume": "224",
+      "pages": "105804",
       "year": "2026"
     },
     {
@@ -69,8 +71,6 @@
       "journal": "arXiv",
       "author": "Federico Milanesio, Matteo Santoro, Pietro G. Fré, Guido Sanguinetti",
       "month": "may",
-      "volume":"224",
-      "pages":"105804",
       "year": "2025"
     },
     {
@@ -368,7 +368,7 @@
         "volume": "7",
         "link": "https://www.nature.com/articles/s41598-017-07761-0",
         "journal": "Scientific Reports",
-        "author": "Antonio Rosanova,Alberto Colliva, Matteo Osella, Michele Caselle",
+        "author": "Antonio Rosanova, Alberto Colliva, Matteo Osella, Michele Caselle",
         "year": "2017",
         "pages": "7596"
     },
