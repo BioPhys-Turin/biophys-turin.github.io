@@ -22,6 +22,7 @@ exclude:
   - network/requirements.txt
   - network/LICENSE.md
   - images/icons/LICENSE.md
+  - tools
 
 defaults:
   - scope:
