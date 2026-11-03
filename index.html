@@ -3,9 +3,25 @@ permalink: /
 description: Homepage of the INFN Biophys group at UniTO
 preload_image: /images/protein.jpeg
 ---
+{%- comment -%} The 5 most recent papers: newest year first, then file order within a year {%- endcomment -%}
+{%- assign years = site.data.papers | group_by: "year" | sort: "name" | reverse -%}
+{%- assign latest = "" | split: "" -%}
+{%- for year in years -%}
+    {%- for paper in year.items -%}
+        {%- if latest.size < 5 -%}{%- assign latest = latest | push: paper -%}{%- endif -%}
+    {%- endfor -%}
+{%- endfor %}
 <div class="hero">
     <div class="hero-content">
         <h1>The official page of the INFN Biophys group at UniTO</h1>
         <p>Explore our research in Systems Biology and Neural Networks</p>
     </div>
 </div>
+
+<section class="latest-papers">
+    <h2>Latest papers</h2>
+    {%- for paper in latest %}
+    {% include paper.html paper=paper %}
+    {%- endfor %}
+    <p class="more-link"><a href="{{ '/papers' | relative_url }}">See all papers →</a></p>
+</section>

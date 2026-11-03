@@ -3,29 +3,22 @@ title: Papers
 permalink: /papers
 description: Papers from the INFN Biophys group at UniTO
 scripts:
-  - /scripts/cite.js
+  - /scripts/papers.js
 ---
 {%- comment -%} Newest year first; within a year, papers keep their order in _data/papers.json {%- endcomment -%}
 {%- assign years = site.data.papers | group_by: "year" | sort: "name" | reverse %}
 <div class="container">
     <div id="papersList">
+        <input type="search" id="paperSearch" class="paper-search" placeholder="Search by title, author, journal or year" aria-label="Search papers" hidden>
         {%- for year in years %}
-        {%- for paper in year.items %}
-        <div class="paper">
-            <img src="{{ '/images/icons/doc.svg' | relative_url }}" alt="">
-            <div class="paper-info">
-                <p><span class="author">{{ paper.author | escape }} ({{ paper.year }})</span></p>
-                <p><a href="{{ paper.link }}" target="_blank" rel="noopener" class="paper-title">{{ paper.title | escape }}</a></p>
-                <span class="journal">{{ paper.journal | default: paper.booktitle | escape }}{% if paper.volume %} {{ paper.volume }}{% endif %}{% if paper.number %}, {{ paper.number }}{% endif %}</span>
-                <div class="cite-button">
-                    <button type="button" data-cite>Cite</button>
-                </div>
-                {%- capture bibtex %}{% include bibtex.txt paper=paper %}{% endcapture %}
-                <pre class="bibtex" hidden>{{ bibtex | escape }}</pre>
-            </div>
-        </div>
+        <section class="paper-year">
+            <h2 class="year-heading">{{ year.name }}</h2>
+            {%- for paper in year.items %}
+            {% include paper.html paper=paper cite=true %}
+            {%- endfor %}
+        </section>
         {%- endfor %}
-        {%- endfor %}
+        <p id="noResults" class="no-results" hidden>No papers match your search.</p>
     </div>
 
     <div id="citePopup" class="popup">

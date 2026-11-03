@@ -398,85 +398,97 @@
     },
     
     {
+        "type": "article",
         "author": "Alma Dal Co, Marco Cosentino Lagomarsino, Michele Caselle, Matteo Osella",
-        "title": "Stochastic timing in gene expression for simple regulatory strategies.",
+        "title": "Stochastic timing in gene expression for simple regulatory strategies",
         "journal": "Nucleic Acids Research",
         "year": "2017",
         "link": "https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkw1235"
     },
     {
+        "type": "article",
         "author": "Francesca Orso, Lorena Quirico, Federico Virga, Elisa Penna, Daniela Dettori, Daniela Cimino, Roberto Coppo, Elena Grassi, Angela Rita Elia, Davide Brusa, Silvia Deaglio, Maria Felice Brizzi, Michael B. Stadler, Paolo Provero, Michele Caselle, Daniela Taverna",
-        "title": "miR-214 and miR-148b Targeting Inhibits Dissemination of Melanoma and Breast Cancer.",
+        "title": "miR-214 and miR-148b Targeting Inhibits Dissemination of Melanoma and Breast Cancer",
         "journal": "Cancer Research",
         "year": "2016",
         "link": "http://cancerres.aacrjournals.org/content/76/17/5151.long"
     },
     {
+        "type": "article",
         "author": "Lorenzo Cantini, Enzo Medico, Santo Fortunato, Michele Caselle",
-        "title": "Detection of gene communities in multi-networks reveals cancer drivers.",
-        "journal": "Sci Reports",
+        "title": "Detection of gene communities in multi-networks reveals cancer drivers",
+        "journal": "Scientific Reports",
         "year": "2015",
         "link": "http://www.nature.com/articles/srep17386?shunter=1489658587172"
     },
     {
+        "type": "article",
         "author": "Laura Cantini, Claudio Isella, Consalvo Petti, Gabriele Picco, Simone Chiola, Elisa Ficarra, Michele Caselle, Enzo Medico",
-        "title": "MicroRNA-mRNA interactions underlying colorectal cancer molecular subtypes.",
+        "title": "MicroRNA-mRNA interactions underlying colorectal cancer molecular subtypes",
         "journal": "Nature Communications",
         "year": "2015",
         "link": "http://www.nature.com/articles/ncomms9878"
     },
     {
+        "type": "article",
         "author": "Alberto Colliva, Roberto Pellegrini, Alessandro Testori, Michele Caselle",
-        "title": "Ising-model description of long-range correlations in DNA sequences.",
-        "journal": "Physical Review E, Statistical, nonlinear, and soft matter Physics",
+        "title": "Ising-model description of long-range correlations in DNA sequences",
+        "journal": "Physical Review E",
         "year": "2015",
         "link": "https://www.ncbi.nlm.nih.gov/pubmed/26066195"
     },
     {
+        "type": "article",
         "author": "Matteo Osella, Andrea Riba, Alessandro Testori, Davide Corà, Michele Caselle",
-        "title": "Interplay of microRNA and epigenetic regulation in the human regulatory network.",
+        "title": "Interplay of microRNA and epigenetic regulation in the human regulatory network",
         "journal": "Frontiers in Genetics",
         "year": "2014",
         "link": "http://journal.frontiersin.org/journal/10.3389/fgene.2014.00345/full"
     },
     {
+        "type": "article",
         "author": "Anna De Grassi, Fabio Iannelli, Matteo Cereda, Sara Volorio, Valentina Melocchi, Alessandra Viel, Gianluca Basso, Luigi Laghi, Michele Caselle, Francesca D Ciccarelli",
-        "title": "Deep sequencing of the X chromosome reveals the proliferation history of colorectal adenomas.",
-        "journal": "Genome Biol",
+        "title": "Deep sequencing of the X chromosome reveals the proliferation history of colorectal adenomas",
+        "journal": "Genome Biology",
         "year": "2014",
         "link": "http://genomebiology.com/content/15/8/437"
     },
     {
+        "type": "article",
         "author": "Andrea Riba, Carla Bosia, Mariama El Baroudi, Laura Ollino, Michele Caselle",
-        "title": "A combination of transcriptional and microRNA regulation improves the stability of the relative concentrations of target genes.",
+        "title": "A combination of transcriptional and microRNA regulation improves the stability of the relative concentrations of target genes",
         "journal": "PLoS Computational Biology",
         "year": "2014",
         "link": "http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003490"
     },
     {
+        "type": "article",
         "author": "Alessandro Testori, Livia Caizzi, Santina Cutrupi, Olivier Friard, Michele De Bortoli, Davide Corà, Michele Caselle",
-        "title": "The role of Transposable Elements in shaping the combinatorial interaction of Transcription Factors.",
+        "title": "The role of Transposable Elements in shaping the combinatorial interaction of Transcription Factors",
         "journal": "BMC Genomics",
         "year": "2012",
         "link": "http://www.biomedcentral.com/1471-2164/13/400"
     },
     {
+        "type": "article",
         "author": "Matteo Osella, Carla Bosia, Davide Corà, Michele Caselle",
-        "title": "The Role of Incoherent MicroRNA-Mediated Feedforward Loops in Noise Buffering.",
+        "title": "The Role of Incoherent MicroRNA-Mediated Feedforward Loops in Noise Buffering",
         "journal": "PLoS Computational Biology",
         "year": "2011",
         "link": "http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1001101"
     },
     {
+        "type": "article",
         "author": "Carla Bosia, Matteo Osella, Mariama El Baroudi, Davide Corà, Michele Caselle",
-        "title": "Gene autoregulation via intronic microRNAs and its functions.",
-        "journal": "BMC System Biology",
+        "title": "Gene autoregulation via intronic microRNAs and its functions",
+        "journal": "BMC Systems Biology",
         "year": "2012",
         "link": "http://www.biomedcentral.com/1752-0509/6/131"
     },
     {
+        "type": "article",
         "author": "Angela Re, Davide Corà, Daniela Taverna, Michele Caselle",
-        "title": "Genome-wide survey of microRNA-transcription factor feed-forward regulatory circuits in human.",
+        "title": "Genome-wide survey of microRNA-transcription factor feed-forward regulatory circuits in human",
         "journal": "Molecular BioSystems",
         "year": "2009",
         "link": "http://www.rsc.org/publishing/journals/MB/article.asp?doi=b900177h"

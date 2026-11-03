@@ -11,6 +11,9 @@ body {
 h1 {
     text-align: center;
 }
+[hidden] {
+    display: none !important;
+}
 
 /* ==========================================================================
    Header / navigation
@@ -39,6 +42,13 @@ nav ul li {
 nav ul li a {
     color: #333;
     text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a[aria-current="page"] {
+    border-bottom: 2px solid currentColor;
+}
+nav ul li a[aria-current="page"] {
+    font-weight: 700;
 }
 .identity-logo img {
     display: flex;
@@ -69,7 +79,8 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    height: 80vh;
+    height: 60vh;
+    min-height: 400px;
     padding: 20px;
     color: #fff;
     text-align: center;
@@ -91,6 +102,28 @@ nav ul li a {
     margin-bottom: 40px;
     font-size: 2em;
     font-weight: 700;
+}
+
+/* Home: latest papers */
+.latest-papers {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+.latest-papers h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+.more-link {
+    text-align: right;
+    font-size: 1.1rem;
+}
+.more-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+.more-link a:hover {
+    text-decoration: underline;
 }
 
 /* ==========================================================================
@@ -190,9 +223,9 @@ nav ul li a {
    ========================================================================== */
 #researchersList,
 #researchersListFormer {
-    margin-top: 2rem;
-    margin-left: 20rem;
-    margin-right: 20rem;
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: 2rem auto 0;
     padding: 1rem;
 }
 .researcher {
@@ -227,6 +260,7 @@ nav ul li a {
     object-fit: cover;
 }
 .profile-details {
+    flex: 1;
     overflow: hidden;
 }
 .profile-details h2 {
@@ -244,7 +278,7 @@ nav ul li a {
     color: #666;
 }
 .researcher hr {
-    width: 800px;
+    width: 100%;
     margin-left: 0;
     text-align: left;
 }
@@ -277,6 +311,30 @@ p.description {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
+}
+#papersList {
+    width: 100%;
+}
+.paper-search {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.8rem;
+    font: inherit;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+}
+.year-heading {
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.3rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+.no-results {
+    color: #666;
+    text-align: center;
 }
 .paper {
     display: flex;
@@ -420,16 +478,21 @@ footer a:hover {
         flex-direction: column;
         align-items: stretch;
     }
-    #researchersList,
-    #researchersListFormer {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
     .mission-image,
     .mission-item {
         margin-bottom: 0;
         padding: 0;
     }
+    .news-container iframe {
+        height: 115vh;
+    }
+}
+
+/* ==========================================================================
+   Mobile (≤ 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Researchers: stack photo above details */
     .former-list {
         flex-direction: column;
     }
@@ -457,24 +520,13 @@ footer a:hover {
         height: 90px;
         margin-right: 20px;
     }
-    .researcher hr {
-        width: 100%;
-    }
     .profile-details h2 {
         font-size: 1.2rem;
     }
     .profile-details p {
         font-size: 1rem;
     }
-    .news-container iframe {
-        height: 115vh;
-    }
-}
 
-/* ==========================================================================
-   Mobile (≤ 768px)
-   ========================================================================== */
-@media (max-width: 768px) {
     h1 {
         margin-top: 20px;
         font-size: 1.3em;
