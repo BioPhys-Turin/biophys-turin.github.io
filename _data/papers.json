@@ -1,4 +1,40 @@
-[ 
+[
+  {
+    "type": "misc",
+    "title": "An Analytical Theory of Auxiliary Learning",
+    "link": "https://doi.org/10.48550/arxiv.2609.29774",
+    "author": "Federico Milanesio, Alessandro Ingrosso, Matteo Osella",
+    "year": "2026",
+    "month": "sep",
+    "journal": "arXiv",
+    "doi": "10.48550/arxiv.2609.29774"
+  },
+  {
+    "type": "article",
+    "title": "Dynamics of memory B cells and plasmablasts in healthy individuals",
+    "link": "https://doi.org/10.1073/pnas.2528141123",
+    "author": "Andrea Mazzolini, Aleksandra M. Walczak, Thierry Mora",
+    "year": "2026",
+    "month": "jan",
+    "journal": "Proceedings of the National Academy of Sciences",
+    "volume": "123",
+    "number": "5",
+    "pages": "e2528141123",
+    "doi": "10.1073/pnas.2528141123"
+  },
+  {
+    "type": "article",
+    "title": "Casimir effect in critical O( N ) models from nonequilibrium Monte Carlo simulations",
+    "link": "https://doi.org/10.1103/lcvl-dgv4",
+    "author": "Andrea Bulgarelli, Michele Caselle, Alessandro Nada, Marco Panero C",
+    "year": "2025",
+    "month": "nov",
+    "journal": "Physical review. E",
+    "volume": "112",
+    "number": "6",
+    "pages": "064126",
+    "doi": "10.1103/lcvl-dgv4"
+  },
   {
     "type": "misc",
     "title": "Integration of single-cell multi-omic data with graph-based topic modelling",
