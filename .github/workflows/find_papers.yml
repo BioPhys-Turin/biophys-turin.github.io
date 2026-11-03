@@ -35,7 +35,7 @@ jobs:
 
       - name: Find papers
         if: steps.open.outputs.count == '0'
-        run: python tools/find_papers.py --body "$RUNNER_TEMP/pr-body.md"
+        run: python tools/find_papers.py --pr-body > "$RUNNER_TEMP/pr-body.md"
 
       - name: Open pull request
         if: steps.open.outputs.count == '0'

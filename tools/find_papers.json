@@ -1,5 +1,5 @@
 {
-  "affiliation_pattern": "Turin|Torino",
+  "affiliations": ["Turin", "Torino"],
   "lookback_years": 1,
   "include_types": ["article", "review", "letter", "preprint", "book-chapter", "conference-paper"],
   "exclude_subfields": ["Nuclear and High Energy Physics"]
