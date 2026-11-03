@@ -58,29 +58,6 @@ nav ul li a {
 }
 
 /* ==========================================================================
-   Loading overlay
-   ========================================================================== */
-.loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255 255 255 / 0.8);
-}
-.loading img {
-    width: 60px;
-    height: auto;
-}
-.content {
-    display: none;
-}
-
-/* ==========================================================================
    Home: hero
    ========================================================================== */
 .hero {
@@ -165,6 +142,11 @@ nav ul li a {
     margin: 0 auto;
     padding: 2rem;
 }
+#map {
+    width: 50%;
+    height: 360px;
+    margin: 0 auto;
+}
 
 /* Lightbox (About page images) */
 #lightbox {
@@ -213,10 +195,10 @@ nav ul li a {
     display: flex;
     margin-bottom: 30px;
 }
-.researcher-pair {
+.former-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 .researcher_former {
     box-sizing: border-box;
@@ -345,6 +327,11 @@ p.description {
 .popup-content h2 {
     margin-bottom: 10px;
 }
+.popup-content pre {
+    text-align: left;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
 
 /* ==========================================================================
    News
@@ -439,7 +426,7 @@ footer a:hover {
         margin-bottom: 0;
         padding: 0;
     }
-    .researcher-pair {
+    .former-list {
         flex-direction: column;
     }
     .researcher {
@@ -548,6 +535,9 @@ footer a:hover {
     }
     .mission-image {
         order: 2;
+    }
+    #map {
+        width: 90%;
     }
     #lightbox img {
         max-width: 90%;

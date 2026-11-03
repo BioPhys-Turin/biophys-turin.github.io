@@ -1,80 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Researchers</title>
-    <meta name="description" content="Researchers from the INFN Biophys group at UniTO">
-    <meta name="keywords" content="Biophys, Unito, Torino, Turin, Complex Systems, Physics, Neural Networks">
-    <meta name="author" content="Federico Milanesio">
-
-    <meta property="og:title" content="Researchers - Biophys Turin">
-    <meta property="og:description" content="Researchers from the INFN Biophys group at UniTO">
-    <meta property="og:url" content="https://biophys-turin.github.io/researchers">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_IT">
-    <meta property="og:site_name" content="INFN Biophys Group">
-
-    <meta name="twitter:title" content="Researchers - Biophys Turin">
-    <meta name="twitter:description" content="Researchers from the INFN Biophys group at UniTO">
-    <meta name="robots" content="index,follow">
-
-    <link rel="preload" href="/scripts/loading.js" as="script">
-    <link rel="preload" href="/scripts/nav.js" as="script">
-    <link rel="preload" href="/scripts/nav-click.js" as="script">
-    <link rel="preload" href="/scripts/footer.js" as="script">
-    <link rel="preload" href="/scripts/scripts-res.js" as="script">
-    <link rel="preload" href="/scripts/scripts-res-former.js" as="script">
-    <link rel="preload" href="/scripts/url-manip.js" as="script">
-    <link rel="preload" href="styles.css" as="style" />
-
-    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-    <meta http-equiv="Content-Security-Policy" content="
-                default-src 'self'; 
-                script-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com;
-                style-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com https://code.ionicframework.com https://maxcdn.bootstrapcdn.com;
-                img-src 'self' data: https://tile.openstreetmap.org;
-                font-src 'self' https://code.ionicframework.com;
-        ">
-    
-
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-    <!-- Add Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-</head>
-<body>
-    <header>
-        <div id="nav-container"></div>
-        <script src="scripts/nav.js"></script>
-        <script src="scripts/nav-click.js"></script>
-    </header>
-
-    <div class="loading">
-        <img src="images/loading.gif" alt="Loading..." />
+---
+title: Researchers
+permalink: /researchers
+description: Researchers from the INFN Biophys group at UniTO
+---
+<div id="researchersList">
+    <h1>CURRENT MEMBERS</h1>
+    {%- for researcher in site.data.researchers %}
+    <div class="researcher">
+        <div class="profile-img">
+            <img src="{{ researcher.image | relative_url }}" alt="{{ researcher.name }}" loading="lazy">
+        </div>
+        <div class="profile-details">
+            <h2>{{ researcher.name }}</h2>
+            <p class="title">{{ researcher.title }}</p>
+            <p class="description">{{ researcher.description }}</p>
+            <hr>
+            <p class="mail">{{ researcher.socials.mail }}</p>
+            {% include social-links.html socials=researcher.socials %}
+        </div>
     </div>
-    <script src="scripts/loading.js"></script>
+    {%- endfor %}
+</div>
 
-    
-    <div id="researchersList" class="content">
-        <h1 > CURRENT MEMBERS</h1>
-        <!-- Researchers will be dynamically added here -->
+<div id="researchersListFormer">
+    <h1>FORMER MEMBERS</h1>
+    <div class="former-list">
+        {%- for researcher in site.data.researchers_former %}
+        <div class="researcher_former">
+            <div class="profile-img">
+                <img src="{{ researcher.image | relative_url }}" alt="{{ researcher.name }}" loading="lazy">
+            </div>
+            <div class="profile-details">
+                <h2>{{ researcher.name }}</h2>
+                <p class="title">{{ researcher.title }}</p>
+                <p class="mail">{{ researcher.socials.mail }}</p>
+                {% include social-links.html socials=researcher.socials %}
+            </div>
+        </div>
+        {%- endfor %}
     </div>
-    
-    <div id="researchersListFormer" class="content">
-        <h1 > FORMER MEMBERS</h1>
-        <!-- Researchers will be dynamically added here -->
-    </div>
-
-    <script src="scripts/scripts-res.js"></script>
-    <script src="scripts/scripts-res-former.js"></script>
-    
-    <div id="footer-container" class="content"></div>
-
-    <script src="scripts/footer.js" defer></script>
-    <!-- JavaScript snippet to remove .html extension -->
-    <script src="scripts/url-manip.js"> </script>
-</body>
-</html>
-
+</div>

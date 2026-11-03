@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <a class="identity-logo" href="{{ '/' | relative_url }}">
+        <img src="{{ '/images/biophys-colored.svg' | relative_url }}" height="647" width="1072" alt="INFN Biophys Turin">
+    </a>
+    <div class="navbar-toggle" onclick="toggleNavbar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="navbar-links" id="navbarLinks">
+        {%- assign links = "Home:/,About:/about,Researchers:/researchers,Papers:/papers,News:/news" | split: "," %}
+        {%- for link in links %}
+        {%- assign parts = link | split: ":" %}
+        <li><a href="{{ parts[1] | relative_url }}"{% if page.url == parts[1] %} aria-current="page"{% endif %}>{{ parts[0] }}</a></li>
+        {%- endfor %}
+    </ul>
+</nav>

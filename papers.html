@@ -1,82 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papers</title>
-    <meta name="description" content="Papers from the INFN Biophys group at UniTO">
-    <meta name="keywords" content="Biophys, Unito, Torino, Turin, Complex Systems, Physics, Neural Networks">
-    <meta name="author" content="Federico Milanesio">
-
-    <meta property="og:title" content="Papers - Biophys Turin">
-    <meta property="og:description" content="Papers from the INFN Biophys group at UniTO">
-    <meta property="og:url" content="https://biophys-turin.github.io/papers">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_IT">
-    <meta property="og:site_name" content="INFN Biophys Group">
-
-    <meta name="twitter:title" content="Papers - Biophys Turin">
-    <meta name="twitter:description" content="Papers from the INFN Biophys group at UniTO">
-    <meta name="robots" content="index,follow">
-
-    <link rel="preload" href="/scripts/loading.js" as="script">
-    <link rel="preload" href="/scripts/nav.js" as="script">
-    <link rel="preload" href="/scripts/nav-click.js" as="script">
-    <link rel="preload" href="/scripts/footer.js" as="script">
-    <link rel="preload" href="/scripts/papers.js" as="script">
-    <link rel="preload" href="/scripts/url-manip.js" as="script">
-    <link rel="preload" href="styles.css" as="style" />
-    <meta http-equiv="Content-Security-Policy" content="
-                default-src 'self'; 
-                script-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com;
-                style-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com https://code.ionicframework.com https://maxcdn.bootstrapcdn.com;
-                img-src 'self' data: https://tile.openstreetmap.org;
-                font-src 'self' https://code.ionicframework.com;
-        ">
-        
-
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
-    <header>
-        <div id="nav-container"></div>
-        <script src="scripts/nav.js"></script>
-        <script src="scripts/nav-click.js"></script>
-    </header>
-
-    <div class="loading">
-        <img src="images/loading.gif" alt="Loading..." />
-    </div>
-    <script src="scripts/loading.js"></script>
-    <div class="content">
-        <div class="container">
-        
-            
-            <div id="papersList">
-                <!-- Papers will be dynamically added here -->
-            </div>
-
-            <!-- Cite Popup -->
-            <div id="citePopup" class="popup">
-                <div class="popup-content">
-                    <h2 id="popupTitle">BibTeX Citation</h2>
-                    <pre id="popupContent">
-                        <!-- Dynamic content will be updated here -->
-                    </pre>
-                    <button onclick="closeCitePopup()">Close</button>
+---
+title: Papers
+permalink: /papers
+description: Papers from the INFN Biophys group at UniTO
+scripts:
+  - /scripts/cite.js
+---
+{%- comment -%} Newest year first; within a year, papers keep their order in _data/papers.json {%- endcomment -%}
+{%- assign years = site.data.papers | group_by: "year" | sort: "name" | reverse %}
+<div class="container">
+    <div id="papersList">
+        {%- for year in years %}
+        {%- for paper in year.items %}
+        <div class="paper">
+            <img src="{{ '/images/icons/doc.svg' | relative_url }}" alt="">
+            <div class="paper-info">
+                <p><span class="author">{{ paper.author | escape }} ({{ paper.year }})</span></p>
+                <p><a href="{{ paper.link }}" target="_blank" rel="noopener" class="paper-title">{{ paper.title | escape }}</a></p>
+                <span class="journal">{{ paper.journal | default: paper.booktitle | escape }}{% if paper.volume %} {{ paper.volume }}{% endif %}{% if paper.number %}, {{ paper.number }}{% endif %}</span>
+                <div class="cite-button">
+                    <button type="button" data-cite>Cite</button>
                 </div>
+                {%- capture bibtex %}{% include bibtex.txt paper=paper %}{% endcapture %}
+                <pre class="bibtex" hidden>{{ bibtex | escape }}</pre>
             </div>
         </div>
-
-        <div id="footer-container"></div>
+        {%- endfor %}
+        {%- endfor %}
     </div>
 
-    <script src="scripts/footer.js" defer></script>
-    <script src="scripts/papers.js"></script>
-    <!-- JavaScript snippet to remove .html extension -->
-    <script src="scripts/url-manip.js"> </script>
-</body>
-</html>
-
+    <div id="citePopup" class="popup">
+        <div class="popup-content">
+            <h2 id="popupTitle">BibTeX Citation</h2>
+            <pre id="popupContent"></pre>
+            <button type="button" id="closeCitePopup">Close</button>
+        </div>
+    </div>
+</div>

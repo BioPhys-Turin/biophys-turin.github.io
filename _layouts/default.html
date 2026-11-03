@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+    {% include head.html %}
+</head>
+<body>
+    <header>
+        {% include nav.html %}
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="{{ '/scripts/nav-click.js' | relative_url }}"></script>
+    {%- for script in page.scripts %}
+    <script src="{{ script | relative_url }}"></script>
+    {%- endfor %}
+</body>
+</html>

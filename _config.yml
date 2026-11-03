@@ -1,0 +1,39 @@
+# Site settings — built by GitHub Pages (Jekyll). Restart `jekyll serve` after editing this file.
+title: INFN Biophys Turin
+description: Homepage of the INFN Biophys group at UniTO
+url: https://biophys-turin.github.io
+baseurl: ""
+lang: en
+locale: en_IT
+author: Federico Milanesio
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - network/network.py
+  - network/network.html.template
+  - network/requirements.txt
+  - network/LICENSE.md
+  - images/icons/LICENSE.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  # Keep generated/helper files out of the sitemap
+  - scope:
+      path: network
+    values:
+      sitemap: false
+  - scope:
+      path: googleb28c66d2a1987e49.html
+    values:
+      sitemap: false

@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% seo %}
+{%- unless page.csp == false %}
+<meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com;
+    style-src 'unsafe-inline' 'self' https://unpkg.com https://cdnjs.cloudflare.com https://code.ionicframework.com;
+    img-src 'self' data: https://tile.openstreetmap.org;
+    font-src 'self' https://code.ionicframework.com;
+">
+{%- endunless %}
+<link rel="icon" type="image/png" href="{{ '/images/favicon.png' | relative_url }}">
+<link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+{%- if page.preload_image %}
+<link rel="preload" fetchpriority="high" href="{{ page.preload_image | relative_url }}" as="image">
+{%- endif %}
+{%- if page.map %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+<link rel="stylesheet" href="{{ '/css/leaflet.awesome-markers.css' | relative_url }}">
+<script src="{{ '/scripts/leaflet.awesome-markers.js' | relative_url }}"></script>
+{%- endif %}

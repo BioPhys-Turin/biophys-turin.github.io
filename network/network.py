@@ -117,11 +117,11 @@ class Network:
 
 
 def main():
-    current = [r["name"] for r in load_json("files/researchers.json")]
-    former = [r["name"] for r in load_json("files/researchers-former.json")]
+    current = [r["name"] for r in load_json("_data/researchers.json")]
+    former = [r["name"] for r in load_json("_data/researchers_former.json")]
     net = Network(current, former)
 
-    for paper in load_json("papers/paper.json"):
+    for paper in load_json("_data/papers.json"):
         authors = [a.strip() for a in paper["author"].split(",") if a.strip()]
         net.add_paper(paper["title"].strip(), authors, doi=paper.get("doi", ""), link=paper["link"])
 

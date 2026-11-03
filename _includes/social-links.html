@@ -1,0 +1,8 @@
+<div class="social-links">
+    {%- for social in include.socials %}
+    {%- assign platform = social[0] %}
+    {%- assign url = social[1] %}
+    {%- if platform == "mail" %}{% assign url = "mailto:" | append: url %}{% endif %}
+    <a href="{{ url }}" target="_blank" rel="noopener"><img src="{{ '/images/icons/' | append: platform | append: '.svg' | relative_url }}" alt="{{ platform }}"></a>
+    {%- endfor %}
+</div>

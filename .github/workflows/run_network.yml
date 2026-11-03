@@ -5,9 +5,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'files/researchers.json'
-      - 'files/researchers-former.json'
-      - 'papers/paper.json'
+      - '_data/researchers.json'
+      - '_data/researchers_former.json'
+      - '_data/papers.json'
       - 'network/network.py'
       - 'network/network.html.template'
   workflow_dispatch:
