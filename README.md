@@ -32,7 +32,7 @@ The site is built by [Jekyll](https://jekyllrb.com/), which GitHub Pages runs au
 | `_layouts/default.html` | The page skeleton shared by every page |
 | `_includes/` | Shared pieces: `<head>`, navigation, footer, social links, paper entry, BibTeX template |
 | `_data/` | The content (current and former members, papers) |
-| `styles.css`, `scripts/`, `images/`, `css/` | Static assets, served as-is |
+| `styles.css`, `scripts/`, `images/`, `css/` | Static assets, served as-is. All colours are variables at the top of `styles.css`, with a light and a dark set; the site follows the visitor's system setting |
 | `_config.yml` | Site settings |
 
 ### Previewing locally (optional)
