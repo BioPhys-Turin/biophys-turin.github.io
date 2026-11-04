@@ -1,6 +1,29 @@
 [
   {
     "type": "misc",
+    "title": "An Analytical Theory of Auxiliary Learning",
+    "link": "https://doi.org/10.48550/arxiv.2609.29774",
+    "author": "Federico Milanesio, Alessandro Ingrosso, Matteo Osella",
+    "year": "2026",
+    "month": "sep",
+    "journal": "arXiv",
+    "doi": "10.48550/arxiv.2609.29774"
+  },
+  {
+    "type": "article",
+    "title": "Dynamics of memory B cells and plasmablasts in healthy individuals",
+    "link": "https://doi.org/10.1073/pnas.2528141123",
+    "author": "Andrea Mazzolini, Aleksandra M. Walczak, Thierry Mora",
+    "year": "2026",
+    "month": "jan",
+    "journal": "Proceedings of the National Academy of Sciences",
+    "volume": "123",
+    "number": "5",
+    "pages": "e2528141123",
+    "doi": "10.1073/pnas.2528141123"
+  },
+  {
+    "type": "misc",
     "title": "Integration of single-cell multi-omic data with graph-based topic modelling",
     "link": "https://doi.org/10.64898/2026.02.25.707947",
     "author": "Gabriele Malagoli, Filippo Valle, Andreina Tirabassi, Annalisa Marsico, Loredana Martignetti, Michele Caselle, Maria Colomé-Tatché",
@@ -27,7 +50,10 @@
     "year": "2026",
     "month": "jun",
     "journal": "PLOS Complex Systems",
-    "urldate": "2026-06-30"
+    "urldate": "2026-06-30",
+    "volume": "3",
+    "number": "6",
+    "pages": "e0000114"
   },
   {
     "type": "article",
@@ -37,7 +63,10 @@
     "year": "2026",
     "month": "aug",
     "journal": "Scientific Reports",
-    "urldate": "2026-09-18"
+    "urldate": "2026-09-18",
+    "volume": "16",
+    "number": "1",
+    "pages": "36724"
   },
   {
     "type": "article",
@@ -49,7 +78,8 @@
     "month": "apr",
     "volume": "74",
     "number": "4",
-    "year": "2026"
+    "year": "2026",
+    "pages": "e70099"
   },
   {
     "type": "article",
@@ -81,7 +111,10 @@
     "journal": "PLoS Computational Biology",
     "author": "Leonardo Agasso, Ivan Molineris, Michele Caselle",
     "month": "dec",
-    "year": "2025"
+    "year": "2025",
+    "volume": "21",
+    "number": "12",
+    "pages": "e1013766"
   },
   {
     "type": "article",
@@ -106,7 +139,8 @@
     "month": "apr",
     "year": "2025",
     "volume": "7",
-    "number": "2"
+    "number": "2",
+    "pages": "lqaf049"
   },
   {
     "type": "article",
@@ -116,7 +150,10 @@
     "journal": "Nucleic Acids Research",
     "author": "Niccolò Cirone, Marta Biondo, Filippo Valle, Silvia Lazzardi, Michele Caselle, Matteo Osella",
     "month": "aug",
-    "year": "2025"
+    "year": "2025",
+    "volume": "53",
+    "number": "16",
+    "pages": "gkaf805"
   },
   {
     "type": "article",
