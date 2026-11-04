@@ -1,21 +1,27 @@
-"""Propose new group papers for _data/papers.json.
+"""Propose new group papers and updates for _data/papers.json.
 
 Asks OpenAlex (https://openalex.org) for recent works by the current members
-listed in _data/researchers.json (those with an ORCID under "socials"), keeps
-the ones that look like group papers, and adds them to the top of
-_data/papers.json for a person to review in a pull request.
+listed in _data/researchers.json (those with an ORCID under "socials"), and
+changes _data/papers.json for a person to review in a pull request:
 
-A work is proposed when all of these hold:
-  * its type is in "include_types" and its subfield is not in
+New papers are added at the top when all of these hold:
+  * the work's type is in "include_types" and its subfield is not in
     "exclude_subfields" (tools/find_papers.json);
   * at least one current member is listed on it with an affiliation containing
     one of "affiliations" (this filters out namesakes and members' work done
     elsewhere);
   * it is not already in papers.json (same DOI, arXiv ID or title) and has not
     been proposed before (tools/papers_seen.json).
-
 Every proposed work is recorded in tools/papers_seen.json, so a paper deleted
 during review is not proposed again.
+
+Recent entries that are incomplete are updated:
+  * a preprint whose published version appears on OpenAlex becomes the
+    journal article;
+  * an article missing its volume, issue or pages gets them from Crossref
+    (https://www.crossref.org), which usually has them before OpenAlex.
+Titles and author lists are never changed. Only entries from the last
+"lookback_years" years are checked, so this costs a few requests per run.
 
 Usage: python tools/find_papers.py [--dry-run] [--pr-body > body.md]
 Progress goes to stderr; with --pr-body a pull request description is printed
@@ -31,6 +37,7 @@ import re
 import sys
 import time
 import unicodedata
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -42,13 +49,17 @@ FORMER = ROOT / "_data" / "researchers_former.json"
 CONFIG = ROOT / "tools" / "find_papers.json"
 SEEN = ROOT / "tools" / "papers_seen.json"
 
-API = "https://api.openalex.org/works"
+OPENALEX = "https://api.openalex.org/works"
+CROSSREF = "https://api.crossref.org/works/"
 FIELDS = ("id,ids,doi,title,type,publication_date,publication_year,"
           "primary_location,locations,authorships,biblio,primary_topic")
 MONTHS = "jan feb mar apr may jun jul aug sep oct nov dec".split()
 PREPRINT_VENUES = {"arxiv", "biorxiv", "medrxiv", "research square", "ssrn"}
-BIBTEX_TYPES = {"preprint": "misc", "book-chapter": "incollection",
-                "conference-paper": "inproceedings"}
+# OpenAlex and Crossref work types -> BibTeX entry types (anything else is "article")
+BIBTEX_TYPES = {"preprint": "misc", "book-chapter": "incollection", "conference-paper": "inproceedings",
+                "proceedings-article": "inproceedings"}
+PUBLISHED_CROSSREF_TYPES = {"journal-article", "proceedings-article", "book-chapter"}
+BIBLIO_FIELDS = ("volume", "number", "pages")
 
 
 # --- Helpers ------------------------------------------------------------------
@@ -58,19 +69,31 @@ def read_json(path):
         return json.load(file)
 
 
+def write_json(path, data):
+    with open(path, "w", encoding="utf-8") as file:
+        json.dump(data, file, indent=2, ensure_ascii=False)
+        file.write("\n")
+
+
 def fetch(url):
+    """GET a JSON API; None if the record does not exist."""
     key = os.environ.get("OPENALEX_API_KEY")
-    if key:
+    if key and url.startswith(OPENALEX):
         url += "&api_key=" + urllib.parse.quote(key)
     request = urllib.request.Request(url, headers={"User-Agent": "biophys-turin-paper-finder"})
     for attempt in range(4):
         try:
             with urllib.request.urlopen(request, timeout=60) as response:
                 return json.load(response)
+        except urllib.error.HTTPError as error:
+            if error.code == 404:
+                return None
+            if attempt == 3:
+                raise
         except OSError:
             if attempt == 3:
                 raise
-            time.sleep(5 * (attempt + 1))
+        time.sleep(5 * (attempt + 1))
     return None
 
 
@@ -95,8 +118,16 @@ def identifiers(text):
     return found
 
 
+def entry_identifiers(entry):
+    return identifiers(entry.get("link")) | identifiers(entry.get("doi"))
+
+
 def orcid_id(url):
     return (url or "").rstrip("/").rsplit("/", 1)[-1]
+
+
+def venue_key(entry):
+    return "booktitle" if entry["type"] in ("incollection", "inproceedings") else "journal"
 
 
 # --- Reading OpenAlex works ---------------------------------------------------
@@ -124,6 +155,10 @@ def is_preprint(work):
     return work["type"] == "preprint" or venue(work).lower() in PREPRINT_VENUES
 
 
+def is_preprint_entry(entry):
+    return entry.get("type") == "misc" or (entry.get("journal") or "").lower() in PREPRINT_VENUES
+
+
 def has_group_affiliation(authorship, affiliations):
     places = [i["display_name"] for i in authorship["institutions"]]
     places += authorship.get("raw_affiliation_strings") or []
@@ -140,13 +175,6 @@ def is_group_work(work, config, current):
                for a in work["authorships"])
 
 
-def is_published_version(work, existing):
-    """True if work is the journal version of a preprint entry already on the site."""
-    existing_is_preprint = (existing.get("type") == "misc"
-                            or (existing.get("journal") or "").lower() in PREPRINT_VENUES)
-    return existing_is_preprint and not is_preprint(work)
-
-
 def to_entry(work, names_by_orcid):
     """Convert an OpenAlex work to the papers.json format."""
     authors = [names_by_orcid.get(orcid_id(a["author"].get("orcid")), a["author"].get("display_name") or "")
@@ -161,21 +189,50 @@ def to_entry(work, names_by_orcid):
     date = work.get("publication_date") or ""
     if len(date) >= 7:
         entry["month"] = MONTHS[int(date[5:7]) - 1]
-    entry["booktitle" if entry["type"] in ("incollection", "inproceedings") else "journal"] = venue(work)
+    entry[venue_key(entry)] = venue(work)
     biblio = work.get("biblio") or {}
-    if biblio.get("volume"):
-        entry["volume"] = biblio["volume"]
-    if biblio.get("issue"):
-        entry["number"] = biblio["issue"]
     first, last = biblio.get("first_page"), biblio.get("last_page")
-    if first:
-        entry["pages"] = f"{first}-{last}" if last and last != first else first
+    for key, value in (("volume", biblio.get("volume")), ("number", biblio.get("issue")),
+                       ("pages", f"{first}-{last}" if first and last and last != first else first)):
+        if value:
+            entry[key] = value
     if work.get("doi"):
         entry["doi"] = work["doi"].replace("https://doi.org/", "")
     return entry
 
 
-# --- Finding candidates -------------------------------------------------------
+# --- Crossref -----------------------------------------------------------------
+
+def published_doi(entry):
+    """The entry's DOI if it is a published (non-preprint) one."""
+    if is_preprint_entry(entry):
+        return None
+    dois = [found for found in sorted(entry_identifiers(entry))
+            if found.startswith("10.") and not found.startswith("10.48550/")]
+    return dois[0] if dois else None
+
+
+def crossref(doi):
+    """Publication details of a DOI from Crossref, or None if it is not a published work."""
+    record = fetch(CROSSREF + urllib.parse.quote(doi, safe="/"))
+    message = (record or {}).get("message") or {}
+    if message.get("type") not in PUBLISHED_CROSSREF_TYPES:
+        return None
+    date = ((message.get("issued") or {}).get("date-parts") or [[None]])[0]
+    details = {
+        "type": BIBTEX_TYPES.get(message["type"], "article"),
+        "venue": clean((message.get("container-title") or [""])[0]),
+        "volume": message.get("volume"),
+        "number": message.get("issue"),
+        "pages": message.get("page") or message.get("article-number"),
+        "year": str(date[0]) if date[0] else None,
+        "month": MONTHS[date[1] - 1] if len(date) > 1 and date[1] else None,
+        "doi": message["DOI"].lower(),
+    }
+    return {key: value for key, value in details.items() if value}
+
+
+# --- Finding new papers and updates -------------------------------------------
 
 def load_members():
     """Return ({orcid: site name} for current and former members, {orcids of current members})."""
@@ -192,7 +249,7 @@ def recent_works(orcids, since):
     for orcid in sorted(orcids):
         cursor = "*"
         while cursor:
-            page = fetch(f"{API}?filter=author.orcid:{orcid},from_publication_date:{since}"
+            page = fetch(f"{OPENALEX}?filter=author.orcid:{orcid},from_publication_date:{since}"
                          f"&per-page=100&cursor={cursor}&select={FIELDS}")
             works.update((w["id"], w) for w in page["results"])
             cursor = page["meta"].get("next_cursor")
@@ -200,111 +257,144 @@ def recent_works(orcids, since):
     return works
 
 
-def find(config, papers, seen):
-    """Return (new, published).
-
-    new: [(entry, work, member names)] for works to add, newest first.
-    published: [work] for journal versions of preprints already on the site.
-    Every returned work is appended to seen.
-    """
-    names, current = load_members()
-    known_ids = set().union(*(identifiers(p.get("link")) | identifiers(p.get("doi")) for p in papers))
-    known_titles = {normalize(p["title"]): p for p in papers}
+def find_new(works, papers, seen, config, names, current):
+    """New group papers as [(entry, work, member names)], newest first; appends them to seen."""
+    known_ids = set().union(*(entry_identifiers(p) for p in papers))
+    known_titles = {normalize(p["title"]) for p in papers}
     seen_ids = {s["openalex"] for s in seen}
-    since = f"{datetime.date.today().year - config['lookback_years']}-01-01"
 
     candidates = {}  # normalized title -> work, keeping the published version over a preprint
-    published = []
-    for work in recent_works(current, since).values():
+    for work in works.values():
         if work["id"] in seen_ids or not work.get("title") or not is_group_work(work, config, current):
             continue
-        if work_identifiers(work) & known_ids:
-            continue
         title = normalize(work["title"])
-        if title in known_titles:
-            if is_published_version(work, known_titles[title]):
-                published.append(work)
+        if work_identifiers(work) & known_ids or title in known_titles:
             continue
         if title not in candidates or (is_preprint(candidates[title]) and not is_preprint(work)):
             candidates[title] = work
 
-    proposed = sorted(candidates.values(), key=lambda w: w.get("publication_date") or "", reverse=True)
-    for work in proposed + published:
-        seen.append({"openalex": work["id"], "title": clean(work["title"])})
     new = []
-    for work in proposed:
+    for work in sorted(candidates.values(), key=lambda w: w.get("publication_date") or "", reverse=True):
+        seen.append({"openalex": work["id"], "title": clean(work["title"])})
         who = sorted({names[orcid_id(a["author"].get("orcid"))] for a in work["authorships"]
                       if orcid_id(a["author"].get("orcid")) in names})
         new.append((to_entry(work, names), work, who))
-    return new, published
+    return new
+
+
+def matching_work(entry, works):
+    """The OpenAlex work that is the same paper as entry, preferring a published version."""
+    ids, title = entry_identifiers(entry), normalize(entry["title"])
+    matches = [w for w in works.values() if work_identifiers(w) & ids or normalize(w.get("title")) == title]
+    matches.sort(key=is_preprint)
+    return matches[0] if matches else None
+
+
+def work_doi(work):
+    return work["doi"].replace("https://doi.org/", "") if work and work.get("doi") else None
+
+
+def doi_to_check(entry, works):
+    """DOI to look up for an incomplete entry: its published version for a preprint, else its own DOI."""
+    if is_preprint_entry(entry):
+        work = matching_work(entry, works)
+        return work_doi(work) if work and not is_preprint(work) else None
+    return published_doi(entry) or work_doi(matching_work(entry, works))
+
+
+def published_version(entry, details):
+    """Fields that turn a preprint entry into the published paper (title and authors are kept)."""
+    changes = {"type": details["type"], "link": "https://doi.org/" + details["doi"], "doi": details["doi"]}
+    changes.update({key: details[key] for key in ("year", "month", *BIBLIO_FIELDS) if key in details})
+    changes[venue_key(changes)] = details.get("venue", "")
+    return changes
+
+
+def update_entry(entry, works):
+    """Fill in publication details of an incomplete entry in place; return {field: new value}."""
+    doi = doi_to_check(entry, works)
+    details = crossref(doi) if doi else None
+    if not details:
+        return {}
+    if is_preprint_entry(entry):
+        changes = published_version(entry, details)
+        entry.pop(venue_key(entry), None)  # "journal": "arXiv" may become "booktitle"
+    else:
+        changes = {key: details[key] for key in BIBLIO_FIELDS if key in details and not entry.get(key)}
+    changes = {key: value for key, value in changes.items() if entry.get(key) != value}
+    entry.update(changes)
+    return changes
+
+
+def find_updates(works, papers, since_year):
+    """Update recent incomplete entries in place; return [(entry, changes)]."""
+    updates = []
+    for entry in papers:
+        if not entry.get("year", "").isdigit() or int(entry["year"]) < since_year:
+            continue
+        if not is_preprint_entry(entry) and all(entry.get(key) for key in ("volume", "pages")):
+            continue
+        changes = update_entry(entry, works)
+        if changes:
+            updates.append((entry, changes))
+    return updates
 
 
 # --- Output -------------------------------------------------------------------
 
-def insert_at_top(entries):
-    """Add entries at the start of papers.json without reformatting the rest of the file."""
-    with open(PAPERS, encoding="utf-8") as file:
-        raw = file.read()
-    start = raw.index("[") + 1
-    block = ",\n".join("  " + json.dumps(e, indent=2, ensure_ascii=False).replace("\n", "\n  ") for e in entries)
-    updated = raw[:start] + "\n" + block + ",\n  " + raw[start:].lstrip()
-    json.loads(updated)  # must still be valid JSON
-    with open(PAPERS, "w", encoding="utf-8") as file:
-        file.write(updated)
-
-
-def save_seen(seen):
-    with open(SEEN, "w", encoding="utf-8") as file:
-        json.dump(seen, file, indent=2, ensure_ascii=False)
-        file.write("\n")
-
-
-def pr_body(new, published):
+def pr_body(new, updates):
     lines = []
     if new:
-        lines += ["These papers by current members were found on [OpenAlex](https://openalex.org) "
-                  "and added to the top of `_data/papers.json`.", "",
-                  "**To review:** delete the entries that are not group papers (or edit them on this branch), "
-                  "check titles, author names and venue names (OpenAlex sometimes gets these slightly wrong), "
-                  "then merge. Deleted papers are not proposed again, "
-                  "because they are recorded in `tools/papers_seen.json`.", "",
+        lines += ["**New papers** by current members, found on [OpenAlex](https://openalex.org) "
+                  "and added to the top of `_data/papers.json`:", "",
                   "| Year | Paper | Venue | Members | OpenAlex subfield |", "| --- | --- | --- | --- | --- |"]
         for entry, work, who in new:
             title = entry["title"].replace("|", "\\|")
-            venue_name = entry.get("journal") or entry.get("booktitle", "")
-            lines.append(f"| {entry['year']} | [{title}]({entry['link']}) | {venue_name} "
+            lines.append(f"| {entry['year']} | [{title}]({entry['link']}) | {entry.get(venue_key(entry), '')} "
                          f"| {', '.join(who)} | {subfield(work)} |")
-    if published:
-        lines += ["", "**Preprints on the site that now have a published version** "
-                  "(not changed automatically; update the entry if you want):", ""]
-        lines += [f"- [{clean(w['title'])}]({w.get('doi') or w['id']}) in {venue(w)}" for w in published]
-    lines += ["", "_Opened by the weekly **Find new papers** workflow (`tools/find_papers.py`)._"]
+        lines += ["", "Delete the entries that are not group papers, and check titles, author names and venue "
+                  "names (OpenAlex sometimes gets these slightly wrong). Deleted papers are not proposed again, "
+                  "because they are recorded in `tools/papers_seen.json`.", ""]
+    if updates:
+        lines += ["**Updated entries** (publication details from [Crossref](https://www.crossref.org); "
+                  "titles and authors unchanged):", ""]
+        for entry, changes in updates:
+            details = ", ".join(f"{key}: {value}" for key, value in changes.items())
+            lines.append(f"- [{entry['title']}]({entry['link']}): {details}")
+        lines.append("")
+    lines += ["_Opened by the weekly **Find new papers** workflow (`tools/find_papers.py`)._"]
     return "\n".join(lines) + "\n"
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--dry-run", action="store_true", help="print what would be proposed, change nothing")
+    parser.add_argument("--dry-run", action="store_true", help="print what would change, change nothing")
     parser.add_argument("--pr-body", action="store_true", help="print a pull request description to stdout")
     args = parser.parse_args()
 
+    config = read_json(CONFIG)
+    papers = read_json(PAPERS)
     seen = read_json(SEEN) if SEEN.exists() else []
-    new, published = find(read_json(CONFIG), read_json(PAPERS), seen)
+    since_year = datetime.date.today().year - config["lookback_years"]
+    names, current = load_members()
+    works = recent_works(current, f"{since_year}-01-01")
+
+    new = find_new(works, papers, seen, config, names, current)
+    updates = find_updates(works, papers, since_year)
     for entry, _, who in new:
-        venue_name = entry.get("journal") or entry.get("booktitle")
-        print(f"NEW  {entry['year']}  {entry['title'][:80]}  [{venue_name}]  ({', '.join(who)})", file=sys.stderr)
-    for work in published:
-        print(f"PUBLISHED  {clean(work['title'])[:80]}  [{venue(work)}]", file=sys.stderr)
-    if not new and not published:
+        print(f"NEW      {entry['year']}  {entry['title'][:80]}  [{entry.get(venue_key(entry))}]  ({', '.join(who)})",
+              file=sys.stderr)
+    for entry, changes in updates:
+        print(f"UPDATED  {entry['title'][:80]}  {changes}", file=sys.stderr)
+    if not new and not updates:
         print("Nothing new.", file=sys.stderr)
         return
     if args.dry_run:
         return
-    if new:
-        insert_at_top([entry for entry, _, _ in new])
-    save_seen(seen)
+    write_json(PAPERS, [entry for entry, _, _ in new] + papers)
+    write_json(SEEN, seen)
     if args.pr_body:
-        print(pr_body(new, published), end="")
+        print(pr_body(new, updates), end="")
 
 
 if __name__ == "__main__":

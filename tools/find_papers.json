@@ -1,6 +1,24 @@
 {
-  "affiliations": ["Turin", "Torino"],
+  "affiliations": [
+    "Turin",
+    "Torino"
+  ],
   "lookback_years": 1,
-  "include_types": ["article", "review", "letter", "preprint", "book-chapter", "conference-paper"],
-  "exclude_subfields": ["Nuclear and High Energy Physics"]
+  "include_types": [
+    "article",
+    "review",
+    "letter",
+    "preprint",
+    "book-chapter",
+    "conference-paper"
+  ],
+  "exclude_subfields": [
+    "Nuclear and High Energy Physics",
+    "Condensed Matter Physics",
+    "Atomic and Molecular Physics, and Optics",
+    "Instrumentation",
+    "Astronomy and Astrophysics",
+    "Aerospace Engineering",
+    "Electrical and Electronic Engineering"
+  ]
 }
