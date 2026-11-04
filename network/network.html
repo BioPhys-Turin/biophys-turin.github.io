@@ -13357,6 +13357,17 @@
         });
     </script>
 
+    <meta name="color-scheme" content="light dark">
+    <style>
+        /* Dark mode: follows the system setting, like the rest of the site.
+           !important is needed to override the inline styles set by the widget. */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: transparent !important; }
+            .link { stroke: #7d848c !important; }
+            .node circle { stroke: #15171a !important; }
+            text { fill: #e4e7eb !important; }
+        }
+    </style>
 </head>
 
 <body style="background-color: rgba(255, 255, 255, 0.808);">

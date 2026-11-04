@@ -1,12 +1,54 @@
 /* ==========================================================================
+   Colours: light by default, dark when the system asks for it
+   ========================================================================== */
+:root {
+    color-scheme: light dark;
+    --bg: #f9f9f9;
+    --surface: #fff;
+    --text: #333;
+    --text-strong: #333;
+    --text-muted: #666;
+    --link: #007bff;
+    --border: #ddd;
+    --field-border: #ccc;
+    --shadow: rgb(0 0 0 / 0.1);
+    --backdrop: rgb(0 0 0 / 0.5);
+    --lightbox-bg: rgb(255 255 255 / 0.7);
+    --lightbox-caption: rgb(255 255 255 / 0.9);
+    --icon-filter: none;  /* the line icons are black SVGs */
+    --logo-filter: none;  /* the group logo has dark lettering */
+    --map-filter: none;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #15171a;
+        --surface: #1e2125;
+        --text: #dcdfe3;
+        --text-strong: #f1f3f5;
+        --text-muted: #a3a9b0;
+        --link: #6ab0ff;
+        --border: #3a3f46;
+        --field-border: #4a5058;
+        --shadow: rgb(0 0 0 / 0.5);
+        --backdrop: rgb(0 0 0 / 0.7);
+        --lightbox-bg: rgb(0 0 0 / 0.8);
+        --lightbox-caption: rgb(30 33 37 / 0.95);
+        --icon-filter: invert(0.88);
+        /* Swap light and dark but keep hues: black text turns white, red stays red */
+        --logo-filter: invert(1) hue-rotate(180deg);
+        --map-filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9);
+    }
+}
+
+/* ==========================================================================
    Base
    ========================================================================== */
 body {
     margin: 0;
     padding: 0;
     font-family: Roboto, Arial, sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--text);
+    background-color: var(--bg);
 }
 h1 {
     text-align: center;
@@ -23,9 +65,9 @@ header {
     top: 0;
     z-index: 999;
     padding: 10px 20px;
-    color: #333;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+    color: var(--text);
+    background-color: var(--surface);
+    box-shadow: 0 2px 5px var(--shadow);
 }
 nav {
     text-align: right;
@@ -40,7 +82,7 @@ nav ul li {
     margin-right: 20px;
 }
 nav ul li a {
-    color: #333;
+    color: var(--text);
     text-decoration: none;
 }
 nav ul li a:hover,
@@ -54,6 +96,7 @@ nav ul li a[aria-current="page"] {
     display: flex;
     width: auto;
     height: 80px;
+    filter: var(--logo-filter);
 }
 .navbar-toggle {
     display: none;
@@ -68,7 +111,7 @@ nav ul li a[aria-current="page"] {
     height: 2px;
     width: 25px;
     margin-bottom: 4px;
-    background-color: #000;
+    background-color: var(--text-strong);
 }
 
 /* ==========================================================================
@@ -119,7 +162,7 @@ nav ul li a[aria-current="page"] {
     font-size: 1.1rem;
 }
 .more-link a {
-    color: #007bff;
+    color: var(--link);
     text-decoration: none;
 }
 .more-link a:hover {
@@ -144,15 +187,15 @@ nav ul li a[aria-current="page"] {
 .mission-item h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
-    color: #333;
+    color: var(--text-strong);
 }
 .mission-item p {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text-muted);
 }
 .mission-item a,
 .mission-item a:visited {
-    color: #000;
+    color: var(--text-strong);
     text-decoration: none;
 }
 .mission-item a:hover {
@@ -179,10 +222,16 @@ nav ul li a[aria-current="page"] {
     margin: 0 auto;
     padding: 2rem;
 }
+.mission-network iframe {
+    border: 1px solid var(--border);
+}
 #map {
     width: 50%;
     height: 360px;
     margin: 0 auto;
+}
+#map .leaflet-tile-pane {
+    filter: var(--map-filter);
 }
 
 /* Lightbox (About page images) */
@@ -195,7 +244,7 @@ nav ul li a[aria-current="page"] {
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgb(255 255 255 / 0.7);
+    background-color: var(--lightbox-bg);
 }
 .lightbox-content {
     text-align: center;
@@ -207,7 +256,7 @@ nav ul li a[aria-current="page"] {
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: var(--surface);
 }
 .image-description {
     display: block;
@@ -215,7 +264,7 @@ nav ul li a[aria-current="page"] {
     margin-left: auto;
     margin-right: auto;
     font-size: 1.1em;
-    background-color: rgb(255 255 255 / 0.9);
+    background-color: var(--lightbox-caption);
 }
 
 /* ==========================================================================
@@ -253,12 +302,12 @@ nav ul li a[aria-current="page"] {
 .former-member h2 {
     margin: 0 0 0.15rem;
     font-size: 1.05rem;
-    color: #333;
+    color: var(--text-strong);
 }
 .former-title {
     margin: 0;
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-muted);
 }
 .former-member .social-links {
     margin-top: 0.35rem;
@@ -286,19 +335,21 @@ nav ul li a[aria-current="page"] {
 .profile-details h2 {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-    color: #333;
+    color: var(--text-strong);
 }
 .profile-details p {
     margin-bottom: 1rem;
     font-size: 1.2rem;
-    color: #666;
+    color: var(--text-muted);
 }
 .researcher .title {
     font-style: italic;
-    color: #666;
+    color: var(--text-muted);
 }
 .researcher hr {
     width: 100%;
+    border: 0;
+    border-top: 1px solid var(--border);
     margin-left: 0;
     text-align: left;
 }
@@ -313,6 +364,7 @@ p.description {
     height: 20px;
     margin-right: 10px;
     border-radius: 0;
+    filter: var(--icon-filter);
     transition: transform 0.3s;
 }
 .social-links img:hover {
@@ -342,18 +394,19 @@ p.description {
     padding: 0.6rem 0.8rem;
     font: inherit;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    color: var(--text);
+    border: 1px solid var(--field-border);
     border-radius: 6px;
-    background-color: #fff;
+    background-color: var(--surface);
 }
 .year-heading {
     margin: 2rem 0 1rem;
     padding-bottom: 0.3rem;
     font-size: 1.5rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border);
 }
 .no-results {
-    color: #666;
+    color: var(--text-muted);
     text-align: center;
 }
 .paper {
@@ -366,12 +419,13 @@ p.description {
     width: 40px;
     height: 40px;
     margin-right: 20px;
+    filter: var(--icon-filter);
 }
 .paper-info {
     flex: 1;
 }
 .paper-title {
-    color: #007bff;
+    color: var(--link);
     text-decoration: none;
 }
 .author {
@@ -394,7 +448,7 @@ p.description {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    background-color: rgb(0 0 0 / 0.5);
+    background-color: var(--backdrop);
 }
 .popup-content {
     position: absolute;
@@ -404,7 +458,7 @@ p.description {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--surface);
 }
 .popup-content h2 {
     margin-bottom: 10px;
@@ -431,7 +485,7 @@ p.description {
 .summary {
     font-size: 1rem;
     line-height: 1.6;
-    color: #555;
+    color: var(--text-muted);
 }
 
 /* ==========================================================================
@@ -455,7 +509,7 @@ p.description {
 .error-page a {
     margin-top: 20px;
     font-size: 18px;
-    color: #3498db;
+    color: var(--link);
     text-decoration: none;
 }
 
@@ -470,11 +524,11 @@ footer {
     height: 220px;
     font-size: 0.8rem;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: var(--bg);
 }
 footer a,
 footer a:visited {
-    color: #000;
+    color: var(--text-strong);
 }
 footer a:hover {
     text-decoration: underline;
@@ -488,6 +542,15 @@ footer a:hover {
 .logo {
     width: auto;
     height: 60px;
+}
+/* Partner logos keep their colours: in dark mode they sit on a light panel */
+@media (prefers-color-scheme: dark) {
+    .logo-container {
+        display: inline-block;
+        padding: 10px 0 10px 20px;
+        border-radius: 10px;
+        background-color: #eef0f2;
+    }
 }
 
 /* ==========================================================================
