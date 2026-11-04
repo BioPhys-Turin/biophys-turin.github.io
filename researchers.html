@@ -26,14 +26,11 @@ description: Researchers from the INFN Biophys group at UniTO
     <h1>FORMER MEMBERS</h1>
     <div class="former-list">
         {%- for researcher in site.data.researchers_former %}
-        <div class="researcher_former">
-            <div class="profile-img">
-                <img src="{{ researcher.image | relative_url }}" alt="{{ researcher.name }}" loading="lazy">
-            </div>
-            <div class="profile-details">
+        <div class="former-member">
+            <img src="{{ researcher.image | relative_url }}" alt="{{ researcher.name }}" loading="lazy">
+            <div>
                 <h2>{{ researcher.name }}</h2>
-                <p class="title">{{ researcher.title }}</p>
-                <p class="mail">{{ researcher.socials.mail }}</p>
+                <p class="former-title">{{ researcher.title }}</p>
                 {% include social-links.html socials=researcher.socials %}
             </div>
         </div>

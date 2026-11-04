@@ -232,15 +232,41 @@ nav ul li a[aria-current="page"] {
     display: flex;
     margin-bottom: 30px;
 }
+/* Former members: compact cards, as many per row as fit */
 .former-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.25rem 1.5rem;
 }
-.researcher_former {
-    box-sizing: border-box;
-    width: 48%;
-    margin-bottom: 30px;
+.former-member {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+.former-member > img {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.former-member h2 {
+    margin: 0 0 0.15rem;
+    font-size: 1.05rem;
+    color: #333;
+}
+.former-title {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+.former-member .social-links {
+    margin-top: 0.35rem;
+}
+.former-member .social-links img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
 }
 .profile-img {
     float: left;
@@ -250,12 +276,6 @@ nav ul li a[aria-current="page"] {
     width: 150px;
     height: 150px;
     margin-right: 20px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.researcher_former .profile-img img {
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -493,9 +513,6 @@ footer a:hover {
    ========================================================================== */
 @media (max-width: 768px) {
     /* Researchers: stack photo above details */
-    .former-list {
-        flex-direction: column;
-    }
     .researcher {
         flex-direction: column;
         margin-left: 15%;
@@ -506,19 +523,6 @@ footer a:hover {
         justify-content: center;
         max-width: 100%;
         margin-bottom: 10px;
-    }
-    .researcher_former {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .researcher_former .profile-img img {
-        flex-shrink: 0;
-        width: 90px;
-        height: 90px;
-        margin-right: 20px;
     }
     .profile-details h2 {
         font-size: 1.2rem;
