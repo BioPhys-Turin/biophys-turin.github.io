@@ -23,14 +23,18 @@
     "doi": "10.1073/pnas.2528141123"
   },
   {
-    "type": "misc",
+    "type": "article",
     "title": "Integration of single-cell multi-omic data with graph-based topic modelling",
-    "link": "https://doi.org/10.64898/2026.02.25.707947",
+    "link": "https://doi.org/10.1093/bib/bbag608",
     "author": "Gabriele Malagoli, Filippo Valle, Andreina Tirabassi, Annalisa Marsico, Loredana Martignetti, Michele Caselle, Maria Colomé-Tatché",
     "year": "2026",
-    "month": "feb",
-    "journal": "bioRxiv",
-    "urldate": "2026-02-26"
+    "month": "nov",
+    "urldate": "2026-02-26",
+    "doi": "10.1093/bib/bbag608",
+    "volume": "27",
+    "number": "6",
+    "pages": "bbag608",
+    "journal": "Briefings in Bioinformatics"
   },
   {
     "type": "misc",
